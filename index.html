@@ -10,18 +10,36 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="header"></div>
+    <header>
+        <div id="gnb">
+            <ul>
+                <li><a href="#"><img src="images/icon-gitW.png" alt="깃허브아이콘"></a></li>
+                <li><a href="#"><img src="images/icon-kakaoW.png" alt="카카오아이콘"></a></li>
+                <li><a href="#"><img src="images/icon-mailW.png" alt="메일아이콘"></a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="nav-btn">
+        <div class="btnMenu js-btnMenu"><span></span></div>
+    </div>
+    <div id="menu-left">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about me</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </div>    
     <section id="home">
-        <div id="home-left"><p>ⓒ 2020. KimBomi. All rights reserved.</p></div>
+        <div id="home-left">
+            <p>ⓒ 2020. KimBomi. All rights reserved.</p>
+        </div>
         <div id="home-right">
             <p class="notice">본 사이트는 포트폴리오 사이트입니다.</p>
             <h1>I am<br>a web<br>publisher</h1>
         </div>
-    </section>
+    </section>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $("#header").load("header.html")  // gnb 
-    </script>
 </body>
 </html>
