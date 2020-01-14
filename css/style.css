@@ -199,9 +199,6 @@ h6.rights, p.notice{
     text-align: right;
     padding-top: 1%;
 }
-h6.rights{
-
-}
 /* 메인페이지 : 왼쪽 사람 그림 영역 */
 #home-left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
@@ -233,8 +230,14 @@ h6.rights{
     padding-top: 5%;
 }
 /* 어바웃미 영역 */
+#about .right{
+    height: 1969px;
+}
 #about .right-wrap{
-    border: 3px solid #148C9F;
+    /* border: 3px solid #148C9F; */
+    background: url("../images/resume1696.png") no-repeat center/contain;
+    height: 100%;
+    top: 0;
 }
 #works .right{
     height: 2000px; /* 임시 길이 지정*/
