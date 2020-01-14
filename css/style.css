@@ -1,0 +1,202 @@
+@charset "utf-8";
+body{
+    /* font-family: 'Ubuntu Mono', monospace; */
+    font-family: 'Noto Sans', sans-serif;
+}
+h1,h2,h3{font-weight: bold;}
+h1{
+    font-size: 84px;
+}
+h2{
+    font-size: 64px;
+}
+h3{
+    font-size: 52px;
+}
+section{
+    /* position: relative; */
+}
+/* 화면 왼쪽 고정 GNB (깃허브, 카톡, 메일 아이콘) */
+#gnb{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 3.64%;
+    height: 100%;
+    background-color: #123C73;
+}
+#gnb ul{
+    position: relative;
+    top: 75%;
+}
+#gnb ul li{
+    width: 42%;
+    margin: 0 auto;
+    height: 30%;
+    margin-bottom: 40%;
+}
+#gnb ul li img{
+    width: 100%;
+    height: 100%;
+}
+.show{
+    display: block;
+    z-index: 98;
+}
+.hidden{
+    display: none;
+}
+/* 메뉴화면 설정 : 노란배경 */
+#menu-left,
+#home-left{
+    width: 62.5%;
+    height: 100vh;
+    /* height: 950px; */
+    position: absolute;
+    top: 0;
+    left: 3.64%;
+}
+#menu-left{
+    background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
+}
+#menu-left ul{
+    width: 50%;
+    height: 52%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#menu-left ul li{
+    width: 100%;
+    height: 25%;
+    text-align: center;    
+}
+#menu-left ul li a{
+    /* font-size: 64px; */
+    font-size: 3.33vw;
+    font-weight: 900;
+    color: #1D4E89;
+    text-transform: uppercase;
+}
+/* 메뉴 버튼 설정 */
+/* 메뉴 버튼 */
+#nav-btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:#FFC107;
+    position: absolute;
+    bottom: 9%;
+    left: 63%;
+    z-index: 99;
+    cursor: pointer;
+}
+.btnMenu{
+    width: 90%;
+    height: 55%;
+    transform: translate(22%, 85%);
+}
+.btnMenu span,
+.btnMenu span::before,
+.btnMenu span::after{
+    display: block;
+    width: 70%;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.btnMenu span{
+    position: relative;
+    transition: all 0.3;
+}
+.btnMenu span::before,
+.btnMenu span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+}
+.btnMenu span::before{
+    top: 20px;
+    transition: 
+    top .3s .3s cubic-bezier(.23, 1, .32, 1),
+    transform .3s cubic-bezier(.23, 1, .32, 1);
+}
+.btnMenu span::after{
+    background-color: #1D4E89;
+    bottom: 20px;
+    transition: 
+        bottom .3s .3s cubic-bezier(.23, 1, .32, 1),
+        transform .3s cubic-bezier(.23, 1, .32, 1);
+}
+.is-open span{
+    background-color: rgba(255, 255, 255, 0);
+}
+.is-open span::before{
+    top: 0;
+    transition: 
+    top 0.3s cubic-bezier(.23, 1, .32, 1),
+    transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1);
+    transform: rotate(-45deg);
+}
+.is-open span::after{
+    bottom: 0;
+    transition: 
+    bottom .3s cubic-bezier(.23, 1, .32, 1),
+    transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1);
+    transform: rotate(45deg);
+}
+/* 메인 왼쪽 사람 그림 영역 */
+#home{
+    width: 100%;
+    height: 100vh;
+    /* height: 950px; */
+}
+#home-left{
+    background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
+}
+#home-left p{
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: lighter;
+}
+/* 메인 화면 왼쪽 흰 여백 */
+#home-right{
+    width: 33%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 66.14%;
+}
+#home-right p.notice{
+    font-size: 14px;
+    color: #BDBDBD;
+    text-align: right;
+    padding-top: 5%;
+}
+#home-right h1{
+    font-family: 'Ubuntu Mono', monospace;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#about-left{
+    width: 33%;
+    height: 970px;
+    position: fixed;
+    top: 0;
+    left: 3.64%;
+    background-color: #1D4E89;    
+}
+#about-right{
+    width: 62.5%;
+    height: 970px;
+    background-color: teal;
+    position: absolute;
+    left: 36.64%;
+    top: 0;
+}
