@@ -52,13 +52,12 @@ section{
     width: 62.5%;
     height: 100vh;
     /* height: 950px; */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 3.64%;
 }
 #menu-left{
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
-    /* display: none; */
 }
 #menu-left ul{
     width: 50%;
@@ -87,7 +86,8 @@ section{
     height: 100px;
     border-radius: 50%;
     background-color:#FFC107;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     bottom: 9%;
     z-index: 99;
     cursor: pointer;
@@ -160,7 +160,6 @@ section{
 }
 #home-left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
-    z-index: 90;
 }
 #home-left p{
     position: absolute;
@@ -197,13 +196,13 @@ section{
     position: fixed;
     top: 0;
     left: 3.64%;
-    background-color: #1D4E89;    
+    background-color: #1D4E89;
 }
 .right{
-    width: 62.5%;
-    height: 970px;
-    background-color: #fff;
+    width: 63%;
+    height: 1970px;
     position: absolute;
     left: 36.64%;
     top: 0;
+    background-color: #fff;
 }
