@@ -10,26 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div id="gnb">
-            <ul>
-                <li><a href="#"><img src="images/icon-gitW.png" alt="깃허브아이콘"></a></li>
-                <li><a href="#"><img src="images/icon-kakaoW.png" alt="카카오아이콘"></a></li>
-                <li><a href="#"><img src="images/icon-mailW.png" alt="메일아이콘"></a></li>
-            </ul>
-        </div>
-    </header>
-    <div id="subBtn">
-        <div class="btnMenu js-btnMenu"><span></span></div>
-    </div>
-    <div id="menu-left">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="about.html">about me</a></li>
-            <li><a href="works.html">works</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
-    </div>    
+    <div id="header"></div>
     <section id="contact">
         <div class="contact left">
             <h3>I am<br>a web<br>publisher</h3>
@@ -40,6 +21,8 @@
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        $('#header').load('subheader.html')    
+    </script>
 </body>
 </html>

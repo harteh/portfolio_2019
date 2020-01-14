@@ -160,6 +160,7 @@ section{
 }
 #home-left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
+    z-index: 90;
 }
 #home-left p{
     position: absolute;

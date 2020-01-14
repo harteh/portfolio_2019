@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>header</title>
+    <title>subHeader</title>    
 </head>
 <body>
     <div id="gnb">
@@ -14,7 +14,7 @@
             <li><a href="#"><img src="images/icon-mailW.png" alt="메일아이콘"></a></li>
         </ul>
     </div>
-    <div id="nav-btn">
+    <div id="subBtn">
         <div class="btnMenu js-btnMenu"><span></span></div>
     </div>
     <div id="menu-left">
@@ -24,16 +24,14 @@
             <li><a href="works.html">works</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
-    </div>
-        
+    </div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $('document').ready(function(){
-            $('#nav-btn').on('click', function(){
-                $('.js-btnMenu').toggleClass('is-open')
-                $('#menu-left').toggleClass('show')
-            });
-        })
+        $('#subBtn').on('click', function(){
+            $('.js-btnMenu').toggleClass('is-open')
+            $('#menu-left').toggleClass('show')
+            $(this).toggleClass('showMove')
+        });
     </script>
 </body>
 </html>
