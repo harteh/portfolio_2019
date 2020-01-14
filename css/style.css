@@ -4,25 +4,17 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 h1,h2,h3{font-weight: bold;}
-h1{
-    font-size: 84px;
-}
-h2{
-    font-size: 64px;
-}
-h3{
-    font-size: 52px;
-}
-section{
-    /* position: relative; */
-}
+h1{ font-size: 84px;}
+h2{ font-size: 64px;}
+h3{ font-size: 52px;}
+h6{ font-size: 14px;}
 /* 화면 왼쪽 고정 GNB (깃허브, 카톡, 메일 아이콘) */
 #gnb{
     position: fixed;
     left: 0;
     top: 0;
     width: 3.64%;
-    height: 100%;
+    height: 100vh;
     background-color: #123C73;
 }
 #gnb ul{
@@ -42,6 +34,7 @@ section{
 .show{
     display: block;
     z-index: 98;
+    transition: all 0.5s;
 }
 .showMove{
     transform: translateX(560px);
@@ -51,7 +44,7 @@ section{
 #home-left{
     width: 62.5%;
     height: 100vh;
-    /* height: 950px; */
+    /* height: 970px; */
     position: fixed;
     top: 0;
     left: 3.64%;
@@ -73,11 +66,15 @@ section{
     text-align: center;    
 }
 #menu-left ul li a{
-    /* font-size: 64px; */
     font-size: 3.33vw;
-    font-weight: 900;
+    font-weight: bold;
     color: #1D4E89;
     text-transform: uppercase;
+    /* font-family: 'Ubuntu Mono', monospace; */
+}
+#menu-left ul li:hover a{
+    font-size: 3.8vw;
+    text-shadow: 1px 1px 1px #007CF9;
 }
 /* 메뉴 버튼 설정 */
 /* 메뉴 버튼 */
@@ -152,12 +149,60 @@ section{
     transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1);
     transform: rotate(45deg);
 }
-/* 메인 왼쪽 사람 그림 영역 */
-#home{
+/* 섹션 설정 */
+section{
     width: 100%;
-    height: 100vh;
-    /* height: 950px; */
+    height: 100%;
 }
+.left{
+    width: 33%;
+    /* height: 970px; */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 3.64%;
+    background-color: #1D4E89;
+    color: #fff;
+}
+.left-wrap{
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.left-wrap h3{    
+    line-height: 80px;
+    letter-spacing: 5px;
+}
+.right{
+    width: 63%;
+    /* height: 1970px; */
+    height: 100%;
+    position: absolute;
+    left: 36.64%;
+    top: 0;
+    background-color: #fff;
+}
+.right-wrap{
+    width: 96%;
+    height: 96%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    background-color: #fff;
+}
+h6.rights, p.notice{
+    font-size: 14px;
+    color: #BDBDBD;
+    text-align: right;
+    padding-top: 1%;
+}
+h6.rights{
+
+}
+/* 메인페이지 : 왼쪽 사람 그림 영역 */
 #home-left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
 }
@@ -177,12 +222,6 @@ section{
     top: 0;
     left: 66.14%;
 }
-#home-right p.notice{
-    font-size: 14px;
-    color: #BDBDBD;
-    text-align: right;
-    padding-top: 5%;
-}
 #home-right h1{
     font-family: 'Ubuntu Mono', monospace;
     position: absolute;
@@ -190,19 +229,13 @@ section{
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.left{
-    width: 33%;
-    height: 970px;
-    position: fixed;
-    top: 0;
-    left: 3.64%;
-    background-color: #1D4E89;
+#home p.notice{
+    padding-top: 5%;
 }
-.right{
-    width: 63%;
-    height: 1970px;
-    position: absolute;
-    left: 36.64%;
-    top: 0;
-    background-color: #fff;
+/* 어바웃미 영역 */
+#about .right-wrap{
+    border: 3px solid #148C9F;
+}
+#works .right{
+    height: 2000px; /* 임시 길이 지정*/
 }
