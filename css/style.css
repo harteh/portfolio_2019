@@ -51,6 +51,8 @@ h6{ font-size: 14px;}
 }
 #menu-left{
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
+    display: none;
+    z-index: 90;
 }
 #menu-left ul{
     width: 50%;
@@ -72,15 +74,6 @@ h6{ font-size: 14px;}
     color: #1D4E89;
     text-transform: uppercase;
 }
-/* #menu-left ul li::after{
-    content: "testtesttest";
-    background: url("../images/Converted.png") no-repeat;
-    width: 350px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
 #menu-left ul li:hover a::after{
     content: "";
     background: url("../images/Converted.png") no-repeat center/contain;
@@ -102,9 +95,10 @@ h6{ font-size: 14px;}
     bottom: 9%;
     z-index: 99;
     cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 #nav-btn{
-    left: 63%;
+    left: 63.5%;
 }
 #subBtn{
     left: 34%;

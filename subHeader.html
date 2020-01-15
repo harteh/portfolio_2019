@@ -37,7 +37,9 @@
     <script>
         $('#subBtn').on('click', function(){
             $('.js-btnMenu').toggleClass('is-open')
-            $('#menu-left').toggleClass('show')
+                // $('#menu-left').toggleClass('show')
+                $('#menu-left').fadeToggle()
+                $('.left').fadeToggle()
             $(this).toggleClass('showMove')
         });
     </script>
