@@ -67,6 +67,7 @@ h6{ font-size: 14px;}
     height: 25%;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 #menu-left ul li a{
     font-size: 3.33vw;
@@ -74,7 +75,7 @@ h6{ font-size: 14px;}
     color: #1D4E89;
     text-transform: uppercase;
 }
-#menu-left ul li:hover ::after{
+#menu-left ul li a::after{
     content: "";
     background: url("../images/underline.png") no-repeat center/contain;
     width: 400%;
@@ -82,6 +83,11 @@ h6{ font-size: 14px;}
     position: absolute;
     top: -15%;
     left: -150%;
+    transition: all 0.5s;
+    opacity: 0;
+}
+#menu-left ul li:hover a::after{
+    opacity: 0.9;
 }
 /* 메뉴 버튼 설정 */
 /* 메뉴 버튼 */
