@@ -1,47 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>sub header</title>
-</head>
 <body>
     <div id="gnb">
-        <ul>
-            <li><a href="https://github.com/harteh" target="_blank"><img src="images/icon-gitW.png" alt="깃허브아이콘"></a></li>
-            <li><a href="#"><img src="images/icon-kakaoW.png" alt="카카오아이콘"></a></li>
-            <li><a href="#"><img src="images/icon-mailW.png" alt="메일아이콘"></a></li>
-        </ul>
+        <p class="mail">harteh31@gmail.com</p>
     </div>
-    <div id="subBtn">
-        <div class="btnMenu js-btnMenu"><span></span></div>
-    </div>
+    <!-- 메뉴화면 설정 -->
     <div id="menu-left">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="works.html">works</a></li>
-            <li><a href="about.html">about me</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
+        <div class="left-wrap">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about me</a></li>
+                <li><a href="works.html">works</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <!-- 햄버거 btn -->
+        <div id="subBtn">
+            <div class="btnMenu js-btnMenu"><span></span></div>
+        </div>
     </div>
-    <section>
-        <div class="left">
-            <div class="left-wrap">
-                <h3>I am<br>a web<br>publisher</h3>
-                <h6 class="rights">ⓒ 2020. KimBomi. All rights reserved.</h6>
+    <!-- about,works,contact 페이지 왼쪽 파란 영역 -->
+    <div id="main-left">
+        <div class="main-left-wrap">
+            <div class="left-text-wrap">
+                <h2>I am<br>a web publisher</h2>
+                <p class="rights">ⓒ 2020. KimBomi. All rights reserved</p>
             </div>
         </div>
-    </section>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $('#subBtn').on('click', function(){
-            $('.js-btnMenu').toggleClass('is-open')
-                // $('#menu-left').toggleClass('show')
-                $('#menu-left').fadeToggle()
-                $('.left').fadeToggle()
-            $(this).toggleClass('showMove')
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
-</html>

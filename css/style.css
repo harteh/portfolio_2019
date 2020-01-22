@@ -3,116 +3,110 @@ body{
     /* font-family: 'Ubuntu Mono', monospace; */
     font-family: 'Noto Sans', sans-serif;
 }
-h1,h2,h3{font-weight: bold;}
+h1,h2,h3{font-weight: bold; color: #757575;}
 h1{ font-size: 84px;}
-h2{ font-size: 64px;}
+h2, #menu-left ul li a{ font-size: 64px;}
 h3{ font-size: 52px;}
-h6{ font-size: 14px;}
-/* 화면 왼쪽 고정 GNB (깃허브, 카톡, 메일 아이콘) */
+h4{ font-size: 32px;}
+h5{ font-size: 28px;}
+p{ font-size: 20px; color: #757575;}
+h1.title{ text-transform: uppercase;}
+/* p.rights{ font-size: 14px; color: #757575; font-weight: 400;} */
+.clear{ clear: both;}
+.clear::after{ content:""; display:block; clear:both;}
+
+/* 왼쪽 고정 gnb 영역 */
 #gnb{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 3.64%;
+    width: 70px;
+    /* height: 1080px; */
     height: 100vh;
     background-color: #123C73;
-}
-#gnb ul{
-    position: relative;
-    top: 75%;
-}
-#gnb ul li{
-    width: 42%;
-    margin: 0 auto;
-    height: 30%;
-    margin-bottom: 40%;
-}
-#gnb ul li img{
-    width: 100%;
-    height: 100%;
-}
-.show{
-    display: block;
-    z-index: 98;
-    transition: all 0.5s;
-}
-.showMove{
-    transform: translateX(560px);
-}
-/* 메뉴화면 설정 : 노란배경 */
-#menu-left,
-#home-left{
-    width: 62.5%;
-    height: 100vh;
-    /* height: 970px; */
     position: fixed;
     top: 0;
-    left: 3.64%;
+    left: 0;
 }
+p.mail{
+    font-size: 14px;
+    color: #f4f4f4;
+    position: fixed;
+    transform: rotate(-90deg);
+    bottom: 90px;
+    left: -35px;
+}
+.left, #menu-left{
+    position: fixed;
+    top: 0;
+    left: 70px;
+    /* height: 1080px; */
+    height: 100vh;
+}
+/* 메뉴화면설정 : 노란배경 */
 #menu-left{
-    background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
-    display: none;
+    width: 1300px;
+    height: 100%;
+    /* display: none; */
     z-index: 90;
 }
-#menu-left ul{
+#menu-left .left-wrap{
+    width: 1250px;
+    height: 100%;
+    display: none;
+    background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
+}
+#menu-left .left-wrap ul{
     width: 50%;
     height: 52%;
     position: absolute;
     top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 46%;
+    transform: translate(-46%, -50%);
 }
-#menu-left ul li{
+#menu-left .left-wrap ul li{
     width: 100%;
     height: 25%;
     text-align: center;
     position: relative;
     cursor: pointer;
 }
-#menu-left ul li a{
-    font-size: 3.33vw;
+#menu-left .left-wrap ul li a{
     font-weight: bold;
     color: #1D4E89;
     text-transform: uppercase;
 }
-#menu-left ul li a::after{
+#menu-left .left-wrap ul li a::after{
     content: "";
     background: url("../images/underline.png") no-repeat center/contain;
-    width: 400%;
+    width: 100%;
     height: 100%;
     position: absolute;
-    top: -15%;
-    left: -150%;
+    top: -20%;
+    left: 0;
     transition: all 0.5s;
     opacity: 0;
 }
-#menu-left ul li:hover a::after{
-    opacity: 0.9;
+#menu-left .left-wrap ul li:hover a::after{
+    opacity: 0.75;
 }
 /* 메뉴 버튼 설정 */
-/* 메뉴 버튼 */
 #nav-btn, #subBtn{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color:#FFC107;
-    /* position: absolute; */
-    position: fixed;
+    background-color: #FFC107;
+    position: absolute;
     bottom: 9%;
-    z-index: 99;
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    z-index: 99;
 }
 #nav-btn{
-    left: 63.5%;
+    right: 0;
 }
 #subBtn{
-    left: 34%;
+    left: 310px;
 }
-.btnMenu{
-    width: 90%;
-    height: 55%;
-    transform: translate(22%, 85%);
+.toRight{
+    transform: translateX(890px);
 }
 .btnMenu span,
 .btnMenu span::before,
@@ -126,6 +120,9 @@ h6{ font-size: 14px;}
 .btnMenu span{
     position: relative;
     transition: all 0.3;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .btnMenu span::before,
 .btnMenu span::after{
@@ -163,96 +160,192 @@ h6{ font-size: 14px;}
     transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1);
     transform: rotate(45deg);
 }
-/* 섹션 설정 */
-section{
-    width: 100%;
-    height: 100%;
-}
-.left{
-    width: 33%;
-    /* height: 970px; */
+/*  headerSub: about,works,contact 페이지 왼쪽 파란 영역*/
+#main-left{
+    width: 410px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 3.64%;
-    background-color: #1D4E89;
-    color: #fff;
 }
-.left-wrap{
-    width: 50%;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.left-wrap h3{    
-    line-height: 80px;
-    letter-spacing: 5px;
-}
-.right{
-    width: 63%;
-    /* height: 1970px; */
-    height: 100%;
-    position: absolute;
-    left: 36.64%;
-    top: 0;
-    background-color: #fff;
-}
-.right-wrap{
-    width: 96%;
-    height: 96%;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    background-color: #fff;
-}
-h6.rights, p.notice{
-    font-size: 14px;
-    color: #BDBDBD;
+#main-left .left-text-wrap{
+    width: 545px;
     text-align: right;
-    padding-top: 1%;
+    transform: translate(-100px, 250px) rotate(-90deg);
 }
-/* 메인페이지 : 왼쪽 사람 그림 영역 */
-#home-left{
-    background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
-}
-#home-left p{
-    position: absolute;
-    bottom: 9%;
-    left: 5%;
-    color: #fff;
-    font-size: 14px;
-    font-weight: lighter;
-}
-/* 메인 화면 왼쪽 흰 여백 */
-#home-right{
-    width: 33%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 66.14%;
-}
-#home-right h1{
-    font-family: 'Ubuntu Mono', monospace;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-#home p.notice{
-    padding-top: 5%;
-}
-/* 어바웃미 영역 */
-#about .right{
-    height: 1969px;
-}
-#about .right-wrap{
-    /* border: 3px solid #148C9F; */
-    background: url("../images/resume1696.png") no-repeat center/contain;
+#main-left .main-left-wrap{
+    background-color: #1D4E89;
+    width: 360px;
     height: 100%;
-    top: 0;
 }
-#works .right{
-    height: 2000px; /* 임시 길이 지정*/
+#main-left .main-left-wrap h2{
+    color: #f4f4f4;
+    line-height: 80px;
+}
+#main-left p.rights{
+    color: #757575;
+    font-size: 14px;
+    margin-top: 20px;
+}
+/*  home 설정 */
+#home .left{
+    width: 1250px;
+    background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
+    /* display: none; */
+}
+#home .h-right{
+    position: fixed;
+    top: 0;
+    left: 1320px;
+    width: 600px;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+#home .h-right .text-wrap{
+    transform: rotate(-90deg);
+    position: absolute;
+    text-align: right;
+    bottom: 260px;
+    width: 720px;
+}
+#home .h-right p{
+    font-size: 32px;
+    margin-top: 36px;
+    line-height: 40px;
+}
+#home p.rights{ 
+    font-size: 16px; 
+    color: #757575; 
+    font-weight: 400;
+}
+/* section{ width: 100%; height: 100%;} */
+section .right{
+    width: 1420px;
+    height: 100%;
+    margin-left: 480px;
+    /* background: rgba(0, 128, 128, 0.459); */
+    position: relative;
+}
+/* about 영역 */
+/* #about .right::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    width: 950px;
+    height: 10px;
+    background-color: #869EBD;
+} */
+#about .a-r-top{
+    height: 110px;
+    position: relative;
+}
+#about .a-r-middle,
+#about .a-r-bottom{
+    margin-left: 50px;
+}
+#about h1.title{
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 27%;
+}
+#about h1::before{
+    content: "";
+    width: 540px;
+    height: 10px;
+    background-color: #869EBD;
+    position: absolute;
+    left: -3.5%;
+    top: 50%;
+}
+#about .a-r-middle{
+    height: 340px;
+    margin-top: 60px;
+}
+#about .a-r-middle .face{
+    float: left;
+    width: 460px;
+    height: 340px;
+    margin-right: 150px;
+}
+#about .a-r-middle .resume{
+    float: left;
+    width: 460px;
+    height: 250px;
+    text-align: right;
+    position: relative;
+}
+#about .a-r-middle .resume p{
+    font-size: 32px;
+    line-height: 40px;
+}
+#about .a-r-middle .resume .icon{
+    height: 35px;
+    margin: 40px auto;
+    z-index: 99;
+}
+#about .a-r-middle .resume .icon a:nth-child(2){
+    margin: 0 50px;
+}
+#about .a-r-middle .resume .resume-btn{
+    width: 180px;
+    height: 40px;
+    border-radius: 90px;
+    background-color: #869EBD;
+    font-size: 28px;
+    text-align: center;
+    color: #f4f4f4;
+    padding-top: 8px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+/* 이력서 모달창 설정 */
+/* 이력서 모달창 설정 */
+#about .a-r-bottom{
+    height: 410px;
+    margin-top: 10px;
+}
+#about .a-r-bottom .describe{
+    float: left;
+    width: 660px;
+    height: 300px;
+    margin-top: 100px;
+}
+#about .a-r-bottom .describe p{
+    font-size: 28px;
+    line-height: 40px;
+}
+#about .a-r-bottom .skills{
+    float: left;
+    text-align: right;
+    width: 675px;
+    height: 100%;
+}
+#about .a-r-bottom .skills p.title{
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+#about .a-r-bottom .skills p.title::after{
+    content: "";
+    width: 470px;
+    height: 3px;
+    background-color: #869EBD;
+    position: absolute;
+    bottom: 5px;
+    right: -8%;
+}
+#about .a-r-bottom .skills p.item{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#about .a-r-bottom .skills p.item:last-child{
+    margin-bottom: 0;
+}
+#about .a-r-bottom .skills p.item img{
+    margin: auto 50px;
 }

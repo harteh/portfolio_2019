@@ -1,42 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>header</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-</head>
 <body>
     <div id="gnb">
-        <ul>
-            <li><a href="https://github.com/harteh" target="_blank"><img src="images/icon-gitW.png" alt="깃허브아이콘"></a></li>
-            <li><a href="#"><img src="images/icon-kakaoW.png" alt="카카오아이콘"></a></li>
-            <li><a href="#"><img src="images/icon-mailW.png" alt="메일아이콘"></a></li>
-        </ul>
+        <p class="mail">harteh31@gmail.com</p>
     </div>
-    <div id="nav-btn">
-        <div class="btnMenu js-btnMenu"><span></span></div>
-    </div>
+    <!-- 메뉴화면 설정 -->
     <div id="menu-left">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="works.html">works</a></li>
-            <li><a href="about.html">about me</a></li>
-            <li><a href="contact.html">contact</a></li>
-        </ul>
+        <div class="left-wrap">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about me</a></li>
+                <li><a href="works.html">works</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <!-- 햄버거 btn -->
+        <div id="nav-btn">
+            <div class="btnMenu js-btnMenu"><span></span></div>
+        </div>
     </div>
-        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $('document').ready(function(){
-            $('#nav-btn').on('click', function(){
-                $('.js-btnMenu').toggleClass('is-open')
-                // $('#menu-left').toggleClass('show')
-                $('#menu-left').fadeToggle()
-                $('#home-left').fadeToggle()
-            });
-        })
-    </script>
+    <script src="js/main.js"></script>
 </body>
-</html>
