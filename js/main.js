@@ -14,6 +14,7 @@ $("document").ready(function(){
 
     $('#subBtn').on('click', function(){
         $(this).toggleClass('toRight')
+        $(this).toggleClass('btn-jittery')
         $('.js-btnMenu').toggleClass('is-open')
         $('#menu-left .left-wrap').fadeToggle()
         $('.main-left-wrap').fadeToggle()
