@@ -101,7 +101,8 @@ p.mail{
     z-index: 99;
 }
 #nav-btn{
-    right: 0;
+    position: fixed;
+    right: 33%;
 }
 #subBtn{
     left: 310px;
