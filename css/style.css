@@ -42,8 +42,8 @@ p.mail{
 }
 /* 메뉴화면설정 : 노란배경 */
 #menu-left{
-    width: 1300px;
-    height: 100%;
+    /* width: 1300px;
+    height: 100%; */
     /* display: none; */
     z-index: 90;
 }
@@ -184,7 +184,8 @@ p.mail{
     height: 100%;
     position: fixed;
     top: 0;
-    left: 3.64%;
+    /* left: 3.64%; */
+    left: 70px;
 }
 #main-left .left-text-wrap{
     width: 545px;
