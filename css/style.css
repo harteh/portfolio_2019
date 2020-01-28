@@ -17,7 +17,8 @@ h1.title{ text-transform: uppercase;}
 
 /* 왼쪽 고정 gnb 영역 */
 #gnb{
-    width: 70px;
+    /* width: 70px; */
+    width: 3.5%;
     /* height: 1080px; */
     height: 100vh;
     background-color: #123C73;
@@ -37,19 +38,21 @@ p.mail{
 .left, #menu-left{
     position: fixed;
     top: 0;
-    left: 70px;
-    /* height: 1080px; */
+    left: 3.5%;
     height: 100vh;
 }
 /* 메뉴화면설정 : 노란배경 */
 #menu-left{
-    /* width: 1300px;
-    height: 100%; */
-    /* display: none; */
+    /* width: 1300px; */
     z-index: 90;
+}
+.submenu{
+    position: relative;
+    width: 21.5%;
 }
 #menu-left .left-wrap{
     width: 1250px;
+    /* width: 65%; */
     height: 100%;
     display: none;
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
@@ -59,7 +62,7 @@ p.mail{
     height: 52%;
     position: absolute;
     top: 55%;
-    left: 46%;
+    left: 48%;
     transform: translate(-46%, -50%);
 }
 #menu-left .left-wrap ul li{
@@ -89,26 +92,26 @@ p.mail{
     opacity: 0.75;
 }
 /* 메뉴 버튼 설정 */
+#nav-btn{
+    position: fixed;
+    left: 65.5%;
+}
+#subBtn{
+    position: absolute;
+    right: -50px;
+}
 #nav-btn, #subBtn{
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: #FFC107;
-    position: absolute;
     bottom: 9%;
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     z-index: 99;
 }
-#nav-btn{
-    position: fixed;
-    right: 33%;
-}
-#subBtn{
-    left: 310px;
-}
-.toRight{
-    transform: translateX(890px);
+.pageRight{
+    width: 1250px;
 }
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
@@ -182,12 +185,12 @@ p.mail{
 }
 /*  headerSub: about,works,contact 페이지 왼쪽 파란 영역*/
 #main-left{
-    width: 410px;
+    /* width: 410px; */
+    width: 21.5%;
     height: 100%;
     position: fixed;
     top: 0;
-    /* left: 3.64%; */
-    left: 70px;
+    left: 3.5%;
     z-index: 85;
 }
 #main-left .left-text-wrap{
@@ -197,7 +200,7 @@ p.mail{
 }
 #main-left .main-left-wrap{
     background-color: #1D4E89;
-    width: 360px;
+    /* width: 360px; */
     height: 100%;
 }
 #main-left .main-left-wrap h2{
@@ -211,17 +214,17 @@ p.mail{
 }
 /*  home 설정 */
 #home .left{
-    width: 1250px;
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
     /* display: none; */
+    width: 65%;
 }
 #home .h-right{
     position: fixed;
     top: 0;
-    left: 1320px;
-    width: 600px;
+    left: 68.5%;
+    width: 31.5%;
     height: 100vh;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
 }
 #home .h-right .text-wrap{
     transform: rotate(-90deg);
@@ -254,7 +257,7 @@ section .right{
 }
 #about .a-r-middle,
 #about .a-r-bottom{
-    margin-left: 50px;
+    margin-left: 10%;
 }
 #about h1.title{
     text-align: center;
@@ -271,34 +274,40 @@ section .right{
     top: 50%;
 }
 #about .a-r-middle{
-    height: 340px;
+    height: 405px;
     margin-top: 60px;
 }
 #about .a-r-middle .face{
     float: left;
-    width: 460px;
+    /* width: 460px; */
     height: 340px;
-    margin-right: 150px;
+    width: 340px;
+    border-radius: 170px;
+    margin-right: 10%;
+    overflow: hidden;
 }
 #about .a-r-middle .describe{
     float: left;
-    width: 660px;
-    height: 300px;
-    margin-top: 20px;
+    /* width: 660px; */    
+    height: 50%;
+    width: 51%;
+    margin-top: 3%;
 }
 #about .a-r-middle .describe p{
     font-size: 28px;
     line-height: 40px;
 }
 #about .a-r-bottom{
-    height: 410px;
-    margin-top: 10px;
+    /* height: 410px; */
+    /* margin-top: 80px; */
 }
 #about .a-r-bottom .resume{
     float: left;
-    width: 460px;
+    /* width: 460px; */
+    width: 36%;
     height: 250px;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-right: 10%;
     position: relative;
 }
 #about .a-r-bottom .resume p{
@@ -328,8 +337,8 @@ section .right{
 }
 #about .a-r-bottom .skills{
     float: left;
-    text-align: right;
-    width: 675px;
+    /* width: 675px; */
+    width: 50%;
     height: 100%;
 }
 #about .a-r-bottom .skills p.title{
@@ -340,7 +349,7 @@ section .right{
     position: relative;
 }
 #about .a-r-bottom .skills p.title::after{
-    content: "";
+    content: "";    
     width: 470px;
     height: 3px;
     background-color: #869EBD;
@@ -348,16 +357,28 @@ section .right{
     bottom: 5px;
     right: -8%;
 }
-#about .a-r-bottom .skills p.item{
+#about .a-r-bottom .skills .item{
+    text-align: right;
     font-size: 28px;
     font-weight: bold;
+    margin-right: 15%;
     margin-bottom: 40px;
+    color: #757575;
 }
-#about .a-r-bottom .skills p.item:last-child{
-    margin-bottom: 0;
+#about .a-r-bottom .skills .item span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: #1D4E89;
+    border: 1px solid #1D4E89;
 }
-#about .a-r-bottom .skills p.item img{
-    margin: auto 50px;
+#about .a-r-bottom .skills .item:nth-of-type(1) span:nth-child(n+9),
+#about .a-r-bottom .skills .item:nth-of-type(2) span:nth-child(n+8),
+#about .a-r-bottom .skills .item:nth-of-type(3) span:nth-child(n+6),
+#about .a-r-bottom .skills .item:nth-of-type(4) span:nth-child(n+7),
+#about .a-r-bottom .skills .item:nth-of-type(5) span:nth-child(n+6){
+    background-color: #fff;
 }
 /* section #works 영역 */
 /* 스크롤유도 표시 : 화면 하단에 고정 */
@@ -370,14 +391,16 @@ section .right{
     position: absolute;
     bottom: 0;
     right: 0;
-    padding-top: 80px;
+    padding-top: 55px;
+    font-size: 14px;
+    color: #757575;
 }
 #works .right .scroll a span{
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
+    left: 70%;
+    width: 10px;
+    height: 10px;
     margin-left: -12px;
     border-left: 1px solid #000;
     border-bottom: 1px solid #000;
@@ -416,23 +439,44 @@ section .right{
     margin: 15px 50px 15px auto;
     font-size: 32px;
 }
+/* 작업물 2 x 3  */
 #works .right .w-r-bottom .content{
     width: 100%;
     height: 520px;
     margin: 85px 0 100px 0;
 }
 #works .right .w-r-bottom .content .box{
-    width: 690px;
+    /* width: 690px; */
+    cursor: pointer;
+    width: 46%;
     height: 520px;
     background-color: palegoldenrod;
     float: left;
     transition: all 1s;
+    position: relative;
 }
 #works .right .w-r-bottom .content:nth-child(odd) .box{
-    margin-right: 55px;
+    margin-right: 3.6%;
 }
 #works .right .w-r-bottom .content:nth-child(even) .box{
-    margin-left: 55px;
+    margin-left: 3.6%;
+}
+/* 작업물 box 설정 */
+#works .right .w-r-bottom .content .box p{
+    position: absolute;
+    left: 5%;
+}
+#works .right .w-r-bottom .content .box p.fn{
+    top: 10%;
+}
+#works .right .w-r-bottom .content .box p.heading{
+    font-size: 52px;
+    font-weight: bold;
+    bottom: 25%;
+}
+#works .right .w-r-bottom .content .box p.explain{
+    font-size: 28px;
+    bottom: 15%;
 }
 #works .right .w-r-bottom .content .box:hover{
     transform: scale(0.9);

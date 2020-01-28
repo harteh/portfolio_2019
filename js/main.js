@@ -13,7 +13,8 @@ $("document").ready(function(){
     });     // header.html 의 메뉴버튼 클릭 시 설정
 
     $('#subBtn').on('click', function(){
-        $(this).toggleClass('toRight')
+        // $(this).toggleClass('toRight')
+        $('.submenu').toggleClass('pageRight')
         $(this).toggleClass('btn-jittery')
         $('.js-btnMenu').toggleClass('is-open')
         $('#menu-left .left-wrap').fadeToggle()
