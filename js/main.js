@@ -21,4 +21,25 @@ $("document").ready(function(){
         $('.main-left-wrap').fadeToggle()
     });     //headerSub.html 의 메뉴버튼 클릭 시 설정
 
+    var work = $('#works .right .w-r-bottom .content .box'),
+        workText = $('.txtTitle p'),
+        workCont = $('.bgi');
+
+    work.hover(function(){
+        // 작업물에 호버 시 설정
+        $(this).css({
+            transform: "scale(0.9)"
+        })
+        $(this).find(workText).css("display", "none")
+        $(this).find(workCont).css("opacity", "1")
+    }, function(){
+        // 마우스가 빠져나왔을 때 설정
+        $(this).css({
+            transform: "",
+            backgroundColor: ""
+        })
+        workText.css("display", "")
+        workCont.css("opacity", "")
+    });
+
 })
