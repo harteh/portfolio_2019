@@ -4,17 +4,20 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 h1,h2,h3{font-weight: bold; color: #757575;}
-h1{ font-size: 84px;}
-h2, #menu-left ul li a{ font-size: 64px;}
-h3{ font-size: 52px;}
-h4{ font-size: 32px;}
-h5{ font-size: 28px;}
-p{ font-size: 20px; color: #757575;}
-h1.title{ text-transform: uppercase;}
+h1{ font-size: 4.368vw; font-family: 'Ubuntu Mono', monospace;}
+h2, #menu-left ul li a{ font-size: 3.328vw;}
+h3{ font-size: 2.704vw;}
+h4{ font-size: 1.664vw;}
+h5{ font-size: 1.456vw;}
+p{ font-size: 1.04vw; color: #757575;}
+h1{ text-transform: uppercase;}
 /* p.rights{ font-size: 14px; color: #757575; font-weight: 400;} */
 .clear{ clear: both;}
 .clear::after{ content:""; display:block; clear:both;}
-
+/* 공통부분 시작 */
+body{
+    position: relative;
+}
 /* 왼쪽 고정 gnb 영역 */
 #gnb{
     /* width: 70px; */
@@ -30,8 +33,8 @@ h1.title{ text-transform: uppercase;}
 p.mail{
     font-size: 14px;
     color: #f4f4f4;
-    position: fixed;
     transform: rotate(-90deg);
+    position: fixed;    
     bottom: 90px;
     left: -35px;
 }
@@ -196,7 +199,8 @@ p.mail{
 #main-left .left-text-wrap{
     width: 545px;
     text-align: right;
-    transform: translate(-100px, 250px) rotate(-90deg);
+    /* transform: translate(-100px, 250px) rotate(-90deg); */
+    transform: translate(-20%, 250px) rotate(-90deg);
 }
 #main-left .main-left-wrap{
     background-color: #1D4E89;
@@ -205,33 +209,38 @@ p.mail{
 }
 #main-left .main-left-wrap h2{
     color: #f4f4f4;
-    line-height: 80px;
+    line-height: 4.16vw;
 }
 #main-left p.rights{
     color: #757575;
-    font-size: 14px;
+    font-size: 0.728vw;
     margin-top: 20px;
 }
+/* 공통부분 끝 */
 /*  home 설정 */
 #home .left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
     /* display: none; */
+    z-index: 85;
     width: 65%;
 }
+#home .left .mobile-text{
+    display: none;
+}
 #home .h-right{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 68.5%;
     width: 31.5%;
     height: 100vh;
-    /* background-color: #f4f4f4; */
 }
 #home .h-right .text-wrap{
     transform: rotate(-90deg);
     position: absolute;
     text-align: right;
-    bottom: 260px;
-    width: 720px;
+    bottom: 25%;
+    width: 120%;
+    height: 40%;
 }
 #home .h-right p{
     font-size: 32px;
@@ -239,15 +248,16 @@ p.mail{
     line-height: 40px;
 }
 #home p.rights{ 
-    font-size: 16px; 
+    font-size: 0.832vw; 
     color: #757575; 
     font-weight: 400;
 }
 /* section{ width: 100%; height: 100%;} */
 section .right{
     /* width: 1420px; */
+    /* margin-left: 480px; */
     height: 100%;
-    margin-left: 480px;
+    margin-left: 24.96vw;
     position: relative;
 }
 /* about 영역 */
@@ -294,12 +304,8 @@ section .right{
     margin-top: 3%;
 }
 #about .a-r-middle .describe p{
-    font-size: 28px;
+    font-size: 1.456vw;
     line-height: 40px;
-}
-#about .a-r-bottom{
-    /* height: 410px; */
-    /* margin-top: 80px; */
 }
 #about .a-r-bottom .resume{
     float: left;
@@ -311,13 +317,13 @@ section .right{
     position: relative;
 }
 #about .a-r-bottom .resume p{
-    font-size: 32px;
+    font-size: 1.664vw;
     line-height: 40px;
 }
 #about .a-r-bottom .resume .icon{
     height: 35px;
     margin: 40px auto;
-    z-index: 99;
+    /* z-index: 99; */
 }
 #about .a-r-bottom .resume .icon a:nth-child(2){
     margin: 0 50px;
@@ -342,7 +348,7 @@ section .right{
     height: 100%;
 }
 #about .a-r-bottom .skills p.title{
-    font-size: 52px;
+    font-size: 2.704vw;
     font-weight: bold;
     margin-bottom: 50px;
     text-align: center;
@@ -350,7 +356,8 @@ section .right{
 }
 #about .a-r-bottom .skills p.title::after{
     content: "";    
-    width: 470px;
+    /* width: 470px; */
+    width: 24.44vw;
     height: 3px;
     background-color: #869EBD;
     position: absolute;
@@ -359,7 +366,7 @@ section .right{
 }
 #about .a-r-bottom .skills .item{
     text-align: right;
-    font-size: 28px;
+    font-size: 1.456vw;
     font-weight: bold;
     margin-right: 15%;
     margin-bottom: 40px;
@@ -434,11 +441,10 @@ section .right{
 }
 #works .right .w-r-top h1{
     margin-right: 50px;
-    text-transform: uppercase;
 }
 #works .right .w-r-top p{
     margin: 15px 50px 15px auto;
-    font-size: 32px;
+    font-size: 1.664vw;
 }
 /* 작업물 2 x 3  */
 #works .right .w-r-bottom .content{
@@ -451,7 +457,7 @@ section .right{
     cursor: pointer;
     width: 46%;
     height: 520px;
-    background-color: palegoldenrod;
+    background-color: #869EBD;
     float: left;
     transition: all 1s;
     position: relative;
@@ -471,12 +477,12 @@ section .right{
     top: 10%;
 }
 #works .right .w-r-bottom .content .box p.heading{
-    font-size: 52px;
+    font-size: 2.704vw;
     font-weight: bold;
     bottom: 25%;
 }
 #works .right .w-r-bottom .content .box p.explain{
-    font-size: 28px;
+    font-size: 1.456vw;
     bottom: 15%;
 }
 #works .right .w-r-bottom .content .box .txtTitle,
@@ -508,7 +514,7 @@ section .right{
 }
 #contact .right .txt p,
 #contact .right .send span{
-    font-size: 100px;
+    font-size: 5.2vw;
     font-weight: bold;
     color: #1D4E89;
 }
