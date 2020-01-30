@@ -1,44 +1,64 @@
 @charset "utf-8";
 /* 테블릿 사이즈 */
 @media screen and (min-width: 641px) and (max-width: 1024px){
-    #home .left{ background-color: green;}
+    #home .left, #menu-left .left-wrap, .pageRight{ background-color: green; width: 630px;}
 
     #gnb{ display: none; }
-    #nav-btn{ left: 60%;}
+    #nav-btn, #subBtn{ bottom: 20%;}
+    #nav-btn{ left: 580px;}
+    #nav-btn:hover, #subBtn:hover{ animation: none;}
     #menu-left, #home .left, #main-left{ left: 0; }
-    #menu-left .left-wrap ul{ top: 55%; left: 65%; width: 50%; height: 50%; }
-    .pageRight{ width: 90vw; }
+    #menu-left .left-wrap ul{ top: 52%; left: 48%; width: 30%; height: 30%; }
+    #home .h-right{ width: 45%; left: 70%; height: 95vh; }
+    #home .h-right p{ margin-top: 20px;}    
     #main-left .left-text-wrap{ transform: translate(-35%, 250px) rotate(-90deg); }
     #about h1::before{ left: -7%; top: 60%;}
     #about .a-r-middle .describe, #about .a-r-bottom .resume, #about .a-r-bottom .skills{ width: 100%; margin-top: 10%;}
     #about .a-r-middle .describe p,
-    #about .a-r-bottom .resume p{ font-size: 18px;}
+    #about .a-r-bottom .resume p{ font-size: 18px; padding-right: 20%;}    
     #about .a-r-bottom .skills p.title{ text-align: left;}
     #about .a-r-bottom .skills p.title::after{ display: none;}
-    #about .a-r-bottom .skills .item{ font-size: 18px; margin-right: 40%; }
+    #about .a-r-bottom .skills .item{ font-size: 18px; margin-right: 40%;     }
     #contact .right .send span:nth-child(2){ top: -25%; }
 }
 /* 모바일 사이즈  */
 @media screen and (max-width: 640px){
-    #home .left,
-    #main-left .main-left-wrap{ background-color: palevioletred; }
-
+    /* #home .left,
+    #main-left .main-left-wrap{ background-color: palevioletred; } */
     #gnb{ display: none; }
-    #nav-btn, #subBtn{ top: 390px;}
+    
+    #nav-btn{ top: 390px; left: 60%; }
+    #subBtn{ top: 150px; left: 200%;}
+    #nav-btn:hover, #subBtn:hover{ animation: none;}
+
     #menu-left, #home .left, #main-left{ left: 0; }
 
     #home .left, #main-left{ width: 100%; height: 440px; background-image: none; }
     #home .left .mobile-text{ display: block; padding-top: 10%; padding-left: 10%;}    
-    #home .left .mobile-text p{ font-family: 'Ubuntu Mono', monospace; color: #f4f4f4; font-size: 52px; font-weight: bold; margin-bottom: 5%; }
+    #home .left .mobile-text p,
+    #main-left .left-text-wrap .mobile-text p{ font-family: 'Ubuntu Mono', monospace; color: #f4f4f4; 
+        font-size: 52px; font-weight: bold; margin-bottom: 5%; }
     #home .left .mobile-text p:nth-child(2){ font-size: 42px; font-weight: 400; }
-    #home .h-right{
-        width: 100%;
-        left: 0;
-    }
-    #home .h-right .text-wrap{ transform: rotate(0);
-        background-color: indigo;
-        width: 100%;
-    }
 
-    #main-left .left-text-wrap{ transform: translate(-35%, 250px);}
+    #home .h-right p{ font-size: 20px; margin-top: 10px; line-height: 30px;}    
+    #home p.rights{font-size: 14px;}
+    #home .h-right{ width: 100%; height: 40vh; top: 440px; left: 0; }
+    #home .h-right .text-wrap{ transform: rotate(0); width: 90%; left: 5%; top: 20%; }
+    #home .h-right .text-wrap h1{ display: none;}
+/*  headerSub: about,works,contact 페이지 왼쪽 파란 영역*/
+    #main-left { height: 200px;}
+    #main-left .left-text-wrap .mobile-text{
+        display: block;
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+    #main-left p.rights{
+        color: #f4f4f4;
+        padding-left: 5%;
+    }
+    #main-left .left-text-wrap .mobile-text p:nth-child(2){ font-size: 28px; }
+    #main-left .left-text-wrap{ transform: translate(0);
+        text-align: left;
+    }
+    #main-left .main-left-wrap h2{ display: none;}
 }

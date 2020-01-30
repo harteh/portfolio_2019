@@ -42,4 +42,14 @@ $("document").ready(function(){
         workCont.css("opacity", "")
     });
 
+    // $(window).resize(function(){
+    //     var width = $(window).width()
+
+    //     if (width < 1024){
+    //         $('#subBtn').removeClass('btn-jittery')
+    //     }else{
+    //         $('#subBtn').toggleClass('btn-jittery')
+    //     }
+    // })
+
 })

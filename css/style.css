@@ -118,7 +118,8 @@ p.mail{
 }
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
-.btn-jittery:hover{ animation: heartbeat 0.3s infinite;	}
+/* .btn-jittery:hover{ animation: heartbeat 0.3s infinite;	} */
+#nav-btn:hover, #subBtn:hover{ animation: heartbeat 0.3s infinite;	}
 @keyframes jittery {
 	5%,
 	50% { transform: scale(1);}
@@ -196,6 +197,9 @@ p.mail{
     left: 3.5%;
     z-index: 85;
 }
+#main-left .left-text-wrap .mobile-text{
+    display: none;
+}
 #main-left .left-text-wrap{
     width: 545px;
     text-align: right;
@@ -220,7 +224,6 @@ p.mail{
 /*  home 설정 */
 #home .left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
-    /* display: none; */
     z-index: 85;
     width: 65%;
 }
@@ -321,9 +324,12 @@ section .right{
     line-height: 40px;
 }
 #about .a-r-bottom .resume .icon{
-    height: 35px;
     margin: 40px auto;
-    /* z-index: 99; */
+}
+#about .a-r-bottom .resume .icon a{
+    display: inline-block;
+    height: 35px;
+    width: 35px;
 }
 #about .a-r-bottom .resume .icon a:nth-child(2){
     margin: 0 50px;
@@ -346,6 +352,7 @@ section .right{
     /* width: 675px; */
     width: 50%;
     height: 100%;
+    text-transform: uppercase;
 }
 #about .a-r-bottom .skills p.title{
     font-size: 2.704vw;
