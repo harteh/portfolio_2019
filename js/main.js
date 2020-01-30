@@ -18,7 +18,10 @@ $("document").ready(function(){
         $(this).toggleClass('btn-jittery')
         $('.js-btnMenu').toggleClass('is-open')
         $('#menu-left .left-wrap').fadeToggle()
+        //메뉴:노란배경 화면 나타나게 설정
         $('.main-left-wrap').fadeToggle()
+        // about,works,contact 페이지 왼쪽 파란 영역 사라지게 설정
+
     });     //headerSub.html 의 메뉴버튼 클릭 시 설정
 
     var work = $('#works .right .w-r-bottom .content .box'),
@@ -42,14 +45,25 @@ $("document").ready(function(){
         workCont.css("opacity", "")
     });
 
-    // $(window).resize(function(){
-    //     var width = $(window).width()
+    $(window).resize(function(){
+        var width = $(window).width();
+        
+        if (width < 640){
+            // 화면 가로값이 640px 보다 작을 때
+            $('#nav-btn').on('click', function(){
+                // 메인화면의 메뉴버튼 클릭 시 설정
+                // $('.submenu').removeClass('pageRight')
+                // $('#menu-left .left-wrap').toggleClass('pageDown')
+            })
+            $('#subBtn').on('click', function(){
+                // 서브페이지들의 메뉴버튼 클릭 시 설정
+                // alert("sdf")
+                // $('.submenu').removeClass('pageRight')
+                // $('#menu-left').toggleClass('pageDown')
+            })
+        }else{
 
-    //     if (width < 1024){
-    //         $('#subBtn').removeClass('btn-jittery')
-    //     }else{
-    //         $('#subBtn').toggleClass('btn-jittery')
-    //     }
-    // })
+        }
+    })
 
 })

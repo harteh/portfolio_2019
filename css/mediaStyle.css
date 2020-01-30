@@ -27,11 +27,43 @@
     #main-left .main-left-wrap{ background-color: palevioletred; } */
     #gnb{ display: none; }
     
-    #nav-btn{ top: 390px; left: 60%; }
-    #subBtn{ top: 150px; left: 200%;}
+    #nav-btn{ top: 390px; left: 70%; }
+    #subBtn{ 
+        /* top: 150px; */
+        right: 10px;
+        /* bottom: 0; */
+    }
     #nav-btn:hover, #subBtn:hover{ animation: none;}
 
     #menu-left, #home .left, #main-left{ left: 0; }
+
+    #main-left .main-left-wrap{
+        /* background-color: pink; */
+        /* about,works,contact 페이지 왼쪽 파란 영역 */
+        /* position: fixed; */
+        /* top: 0; */
+        /* height: 270px; */
+    }
+    .submenu{ width: 65%;
+        /* background-color: red; */
+    }
+    #menu-left{ 
+        height: 270px;
+        /* background-color: green; */
+    }
+    /* 메뉴:노란배경 화면 설정 */
+    #menu-left .left-wrap{ width: 600px; height: 270px; }
+    #menu-left .left-wrap ul{
+        background-color: magenta;
+        width: 60%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+    }
+    #menu-left .left-wrap ul li a{ font-size: 32px;}
+
+
 
     #home .left, #main-left{ width: 100%; height: 440px; background-image: none; }
     #home .left .mobile-text{ display: block; padding-top: 10%; padding-left: 10%;}    

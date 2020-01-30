@@ -59,6 +59,7 @@ p.mail{
     height: 100%;
     display: none;
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
+    
 }
 #menu-left .left-wrap ul{
     width: 50%;
@@ -115,6 +116,11 @@ p.mail{
 }
 .pageRight{
     width: 1250px;
+}
+.pageDown{
+    /* top: 70%; */
+    width: 600px;
+    height: 600px;
 }
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
