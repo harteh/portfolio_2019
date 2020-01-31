@@ -118,9 +118,7 @@ p.mail{
     width: 1250px;
 }
 .pageDown{
-    /* top: 70%; */
-    width: 600px;
-    height: 600px;
+    top: 400px;
 }
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
