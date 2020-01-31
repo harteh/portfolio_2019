@@ -9,7 +9,7 @@ h2, #menu-left ul li a{ font-size: 3.328vw;}
 h3{ font-size: 2.704vw;}
 h4{ font-size: 1.664vw;}
 h5{ font-size: 1.456vw;}
-p{ font-size: 1.04vw; color: #757575;}
+p{ font-size: 20px; color: #757575;}
 h1{ text-transform: uppercase;}
 /* p.rights{ font-size: 14px; color: #757575; font-weight: 400;} */
 .clear{ clear: both;}
@@ -118,7 +118,7 @@ p.mail{
     width: 1250px;
 }
 .pageDown{
-    top: 400px;
+    top: 350px;
 }
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
@@ -221,7 +221,7 @@ p.mail{
 }
 #main-left p.rights{
     color: #757575;
-    font-size: 0.728vw;
+    font-size: 14px;
     margin-top: 20px;
 }
 /* 공통부분 끝 */
@@ -255,7 +255,7 @@ p.mail{
     line-height: 40px;
 }
 #home p.rights{ 
-    font-size: 0.832vw; 
+    font-size: 16px; 
     color: #757575; 
     font-weight: 400;
 }
@@ -310,8 +310,9 @@ section .right{
     width: 51%;
     margin-top: 3%;
 }
-#about .a-r-middle .describe p{
-    font-size: 1.456vw;
+#about .a-r-middle .describe p,
+#about .a-r-bottom .resume p{
+    font-size: 28px;
     line-height: 40px;
 }
 #about .a-r-bottom .resume{
@@ -323,10 +324,7 @@ section .right{
     margin-right: 10%;
     position: relative;
 }
-#about .a-r-bottom .resume p{
-    font-size: 1.664vw;
-    line-height: 40px;
-}
+
 #about .a-r-bottom .resume .icon{
     margin: 40px auto;
 }
@@ -351,21 +349,25 @@ section .right{
     left: 0;
     cursor: pointer;
 }
-#about .a-r-bottom .skills{
+#about .a-r-bottom .mobile-skills{ display: none;}
+#about .a-r-bottom .skills,
+#about .a-r-bottom .mobile-skills{
     float: left;
     /* width: 675px; */
     width: 50%;
     height: 100%;
     text-transform: uppercase;
 }
-#about .a-r-bottom .skills p.title{
+#about .a-r-bottom .skills p.title,
+#about .a-r-bottom .mobile-skills p.title{
     font-size: 2.704vw;
     font-weight: bold;
     margin-bottom: 50px;
     text-align: center;
     position: relative;
 }
-#about .a-r-bottom .skills p.title::after{
+#about .a-r-bottom .skills p.title::after,
+#about .a-r-bottom .mobile-skills p.title::after{
     content: "";    
     /* width: 470px; */
     width: 24.44vw;
@@ -375,21 +377,30 @@ section .right{
     bottom: 5px;
     right: -8%;
 }
-#about .a-r-bottom .skills .item{
+#about .a-r-bottom .skills .item,
+#about .a-r-bottom .mobile-skills .m-item{
     text-align: right;
-    font-size: 1.456vw;
+    font-size: 28px;
     font-weight: bold;
     margin-right: 15%;
     margin-bottom: 40px;
     color: #757575;
 }
-#about .a-r-bottom .skills .item span{
+#about .a-r-bottom .skills .item span,
+#about .a-r-bottom .mobile-skills .m-item span{
     display: inline-block;
+    background-color: #1D4E89;
+    border: 1px solid #1D4E89;
+}
+#about .a-r-bottom .skills .item span{
     width: 20px;
     height: 20px;
     margin-left: 10px;
-    background-color: #1D4E89;
-    border: 1px solid #1D4E89;
+}
+#about .a-r-bottom .mobile-skills .m-item span{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
 }
 #about .a-r-bottom .skills .item:nth-of-type(1) span:nth-child(n+9),
 #about .a-r-bottom .skills .item:nth-of-type(2) span:nth-child(n+8),

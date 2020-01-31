@@ -49,20 +49,9 @@ $("document").ready(function(){
         var width = $(window).width();
         
         if (width < 640){
-            // 화면 가로값이 640px 보다 작을 때
-            // $('#nav-btn').on('click', function(){
-            //     // 메인화면의 메뉴버튼 클릭 시 설정
-            //     // $('.submenu').removeClass('pageRight')
-            //     // $('#menu-left .left-wrap').toggleClass('pageDown')
-            // })
             $('#subBtn').on('click', function(){
-                // 서브페이지들의 메뉴버튼 클릭 시 설정
                 $(this).toggleClass('pageDown')
-                // $('.submenu').removeClass('pageRight')
-                // $('#menu-left').toggleClass('pageDown')
-            })
-        }else{
-
+            })  // 서브페이지들의 메뉴버튼 클릭 시 설정
         }
     })
 
