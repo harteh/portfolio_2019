@@ -5,7 +5,7 @@ body{
 }
 h1,h2,h3{font-weight: bold; color: #757575;}
 h1{ font-size: 4.368vw; font-family: 'Ubuntu Mono', monospace;}
-h2, #menu-left ul li a{ font-size: 3.328vw;}
+h2, #home-menu-left ul li a, #sub-menu-wrap ul li a{ font-size: 3.328vw;}
 h3{ font-size: 2.704vw;}
 h4{ font-size: 1.664vw;}
 h5{ font-size: 1.456vw;}
@@ -20,10 +20,11 @@ body{
 }
 /* 왼쪽 고정 gnb 영역 */
 #gnb{
-    /* width: 70px; */
-    width: 3.5%;
-    /* height: 1080px; */
-    height: 100vh;
+    width: 70px;
+    /* width: 3.5%; */
+    height: 970px;
+    /* height: 100vh; */
+
     background-color: #123C73;
     position: fixed;
     top: 0;
@@ -38,30 +39,24 @@ p.mail{
     bottom: 90px;
     left: -35px;
 }
-.left, #menu-left{
+.left, #home-menu-left{
     position: fixed;
     top: 0;
     left: 3.5%;
-    height: 100vh;
+    height: 100%;
 }
-/* 메뉴화면설정 : 노란배경 */
-#menu-left{
-    /* width: 1300px; */
+/* 홈 화면의 메뉴화면설정 : 노란배경 */
+#home-menu-left{
     z-index: 90;
 }
-.submenu{
-    position: relative;
-    width: 21.5%;
-}
-#menu-left .left-wrap{
+#home-menu-left .home-menu-wrap{
     width: 1250px;
     /* width: 65%; */
     height: 100%;
     display: none;
-    background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
-    
+    background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;    
 }
-#menu-left .left-wrap ul{
+#home-menu-left .home-menu-wrap ul{
     width: 50%;
     height: 52%;
     position: absolute;
@@ -69,19 +64,37 @@ p.mail{
     left: 48%;
     transform: translate(-46%, -50%);
 }
-#menu-left .left-wrap ul li{
+/* 서브 페이지들의 메뉴화면 설정 */
+#sub-menu-wrap{
+    background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
+    width: 95%;
+    height: 100%;
+    display: none;
+}
+#sub-menu-wrap ul{
+    width: 35%;
+    height: 50%;
+    position: absolute;
+    top: 55%;
+    left: 47%;
+    transform: translate(-48%, -55%);
+}
+#home-menu-left .home-menu-wrap ul li,
+#sub-menu-wrap ul li{
     width: 100%;
     height: 25%;
     text-align: center;
     position: relative;
     cursor: pointer;
 }
-#menu-left .left-wrap ul li a{
+#home-menu-left .home-menu-wrap ul li a,
+#sub-menu-wrap ul li a{
     font-weight: bold;
     color: #1D4E89;
     text-transform: uppercase;
 }
-#menu-left .left-wrap ul li a::after{
+#home-menu-left .home-menu-wrap ul li a::after,
+#sub-menu-wrap ul li a::after{
     content: "";
     background: url("../images/underline.png") no-repeat center/contain;
     width: 100%;
@@ -92,154 +105,91 @@ p.mail{
     transition: all 0.5s;
     opacity: 0;
 }
-#menu-left .left-wrap ul li:hover a::after{
+#home-menu-left .home-menu-wrap ul li:hover a::after,
+#sub-menu-wrap ul li:hover a::after{
     opacity: 0.75;
 }
 /* 메뉴 버튼 설정 */
-#nav-btn{
-    position: fixed;
-    left: 65.5%;
-}
-#subBtn{
+/* #subBtn{
     position: absolute;
-    right: -50px;
-}
+    right: 0px;
+} */
 #nav-btn, #subBtn{
+    position: absolute;
     width: 100px;
     height: 100px;
+    bottom: 15%;    
+    cursor: pointer;
     border-radius: 50%;
     background-color: #FFC107;
-    bottom: 9%;
-    cursor: pointer;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     z-index: 99;
 }
-.pageRight{
-    width: 1250px;
-}
-.pageDown{
-    top: 350px;
-}
+#nav-btn{ left: 1200px;}
+#subBtn{ left: 310px}
+
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
 /* .btn-jittery:hover{ animation: heartbeat 0.3s infinite;	} */
-#nav-btn:hover, #subBtn:hover{ animation: heartbeat 0.3s infinite;	}
-@keyframes jittery {
-	5%,
-	50% { transform: scale(1);}
-	10% { transform: scale(0.9);}
-	15% { transform: scale(1.1);}
-	20% { transform: scale(1.1) rotate(-5deg);}
-	25% { transform: scale(1.1) rotate(5deg);}
-	30% { transform: scale(1.1) rotate(-3deg);}
-	35% { transform: scale(1.1) rotate(2deg);}
-	40% { transform: scale(1.1) rotate(0);}
-}
-@keyframes heartbeat {
-	50% { transform: scale(1.1);}
-}
+/* #nav-btn:hover, #subBtn:hover{ animation: heartbeat 0.3s infinite;	} */
+@keyframes jittery {	5%, 50% { transform: scale(1);}	10% { transform: scale(0.9);}	15% { transform: scale(1.1);}	20% { transform: scale(1.1) rotate(-5deg);}	25% { transform: scale(1.1) rotate(5deg);}	30% { transform: scale(1.1) rotate(-3deg);}	35% { transform: scale(1.1) rotate(2deg);}	40% { transform: scale(1.1) rotate(0);}}
+@keyframes heartbeat {	50% { transform: scale(1.1);}}
+.btnMenu span, .btnMenu span::before, .btnMenu span::after{ display: block; width: 70%; height: 8px; background-color: #fff; border-radius: 4px;}
+.btnMenu span{ position: relative; transition: all 0.3; top: 45px; left: 50%; transform: translateX(-50%);}
+.btnMenu span::before, .btnMenu span::after{ content: ""; position: absolute; width: 100%;}
+.btnMenu span::before{ top: 20px; transition: top .3s .3s cubic-bezier(.23, 1, .32, 1), transform .3s cubic-bezier(.23, 1, .32, 1);}
+.btnMenu span::after{ background-color: #1D4E89; bottom: 20px; transition: bottom .3s .3s cubic-bezier(.23, 1, .32, 1), transform .3s cubic-bezier(.23, 1, .32, 1);}
+.is-open span{ background-color: rgba(255, 255, 255, 0);}
+.is-open span::before{ top: 0; transition: top 0.3s cubic-bezier(.23, 1, .32, 1), transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1); transform: rotate(-45deg);}
+.is-open span::after{ bottom: 0; transition: bottom .3s cubic-bezier(.23, 1, .32, 1), transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1); transform: rotate(45deg);}
 
-.btnMenu span,
-.btnMenu span::before,
-.btnMenu span::after{
-    display: block;
-    width: 70%;
-    height: 8px;
-    background-color: #fff;
-    border-radius: 4px;
-}
-.btnMenu span{
-    position: relative;
-    transition: all 0.3;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.btnMenu span::before,
-.btnMenu span::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-}
-.btnMenu span::before{
-    top: 20px;
-    transition: 
-    top .3s .3s cubic-bezier(.23, 1, .32, 1),
-    transform .3s cubic-bezier(.23, 1, .32, 1);
-}
-.btnMenu span::after{
-    background-color: #1D4E89;
-    bottom: 20px;
-    transition: 
-        bottom .3s .3s cubic-bezier(.23, 1, .32, 1),
-        transform .3s cubic-bezier(.23, 1, .32, 1);
-}
-.is-open span{
-    background-color: rgba(255, 255, 255, 0);
-}
-.is-open span::before{
-    top: 0;
-    transition: 
-    top 0.3s cubic-bezier(.23, 1, .32, 1),
-    transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1);
-    transform: rotate(-45deg);
-}
-.is-open span::after{
-    bottom: 0;
-    transition: 
-    bottom .3s cubic-bezier(.23, 1, .32, 1),
-    transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1);
-    transform: rotate(45deg);
-}
 /*  headerSub: about,works,contact 페이지 왼쪽 파란 영역*/
+
 #main-left{
     /* width: 410px; */
-    width: 21.5%;
-    height: 100%;
+    height: 970px;
     position: fixed;
+    left: 70px;
     top: 0;
-    left: 3.5%;
-    z-index: 85;
+    z-index: 97;
 }
-#main-left .left-text-wrap .mobile-text{
-    display: none;
+#main-left-wrap{
+    background-color: #1D4E89;
+    width: 360px;
+    height: 100%;
+    z-index: 97;
 }
-#main-left .left-text-wrap{
-    width: 545px;
+.left-text-wrap{
+    width: 550px;
     text-align: right;
-    /* transform: translate(-100px, 250px) rotate(-90deg); */
     transform: translate(-20%, 250px) rotate(-90deg);
 }
-#main-left .main-left-wrap{
-    background-color: #1D4E89;
-    /* width: 360px; */
-    height: 100%;
-}
-#main-left .main-left-wrap h2{
-    color: #f4f4f4;
-    line-height: 4.16vw;
-}
-#main-left p.rights{
-    color: #757575;
-    font-size: 14px;
-    margin-top: 20px;
-}
+.left-text-wrap h2{ color: #f4f4f4; line-height: 4.16vw;}
+#main-left p.rights{ color: #757575; font-size: 16px; margin-top: 20px;}
+#main-left .left-text-wrap .mobile-text{ display: none;}
+.pageRight{ width: 1250px; z-index: 90;}
+.btnRight{ transform: translateX(830px);}
+.btnTabRight{ transform: translateX(140px);}
+
+/* .pageDown{ top: 350px;} */
+
 /* 공통부분 끝 */
 /*  home 설정 */
 #home .left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
     z-index: 85;
-    width: 65%;
+    width: 1250px;
+    height: 960px;
 }
 #home .left .mobile-text{
     display: none;
 }
 #home .h-right{
-    position: relative;
+    position: absolute;
     top: 0;
-    left: 68.5%;
-    width: 31.5%;
-    height: 100vh;
+    left: 1250px;
+    width: 600px;
+    height: 960px;
 }
 #home .h-right .text-wrap{
     transform: rotate(-90deg);
@@ -259,7 +209,7 @@ p.mail{
     color: #757575; 
     font-weight: 400;
 }
-/* section{ width: 100%; height: 100%;} */
+section{ width: 100%; height: 100%; /* position: relative; */ }
 section .right{
     /* width: 1420px; */
     /* margin-left: 480px; */

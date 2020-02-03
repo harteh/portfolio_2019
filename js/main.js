@@ -8,19 +8,19 @@ $("document").ready(function(){
         
     $('#nav-btn').on('click', function(){
         $('.js-btnMenu').toggleClass('is-open')
-        $('#menu-left .left-wrap').fadeToggle()
-        $('#home .left').fadeToggle()
+        $('#home-menu-left .home-menu-wrap').fadeToggle()
+        // $('#home .left').fadeToggle()
     });     // header.html 의 메뉴버튼 클릭 시 설정
 
     $('#subBtn').on('click', function(){
-        // $(this).toggleClass('toRight')
-        $('.submenu').toggleClass('pageRight')
+        $(this).toggleClass('btnRight')
         $(this).toggleClass('btn-jittery')
         $('.js-btnMenu').toggleClass('is-open')
-        $('#menu-left .left-wrap').fadeToggle()
-        //메뉴:노란배경 화면 나타나게 설정
-        $('.main-left-wrap').fadeToggle()
+        $('#main-left-wrap').fadeToggle()
         // about,works,contact 페이지 왼쪽 파란 영역 사라지게 설정
+        $('#main-left').toggleClass('pageRight')
+        $('#sub-menu-wrap').fadeToggle()
+        //메뉴:노란배경 화면 나타나게 설정
 
     });     //headerSub.html 의 메뉴버튼 클릭 시 설정
 
@@ -47,12 +47,21 @@ $("document").ready(function(){
 
     $(window).resize(function(){
         var width = $(window).width();
-        
-        if (width < 640){
+
+
+        if( width < 1024, width > 641){
             $('#subBtn').on('click', function(){
-                $(this).toggleClass('pageDown')
-            })  // 서브페이지들의 메뉴버튼 클릭 시 설정
+                $(this).removeClass('btnRight')
+                $(this).toggleClass('btnTabRight')
+            })
         }
+        
+        // if (width < 640){
+        //     $('#subBtn').on('click', function(){
+        //         $(this).removeClass('btnRight')
+        //         $(this).toggleClass('pageDown')
+        //     })  // 서브페이지들의 메뉴버튼 클릭 시 설정
+        // }
     })
 
 })
