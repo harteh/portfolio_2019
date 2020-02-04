@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* 테블릿 사이즈 */
+/* 태블릿 사이즈 */
 @media screen and (min-width: 641px) and (max-width: 1024px){
     #home .left, #home-menu-left .home-menu-wrap, .pageRight{ width: 630px;}
     h1{ font-size: 42px;}
@@ -10,25 +10,24 @@
     #nav-btn{ left: 580px;}
     .btnRight{ transform: translateX(240px);}
     .pageRight{ width: 630px;}
-    /* #nav-btn:hover, #subBtn:hover{ animation: none;} */
     #home-menu-left, #home .left, #main-left{ left: 0; }
 
+    #home-menu-left .home-menu-wrap{ background-size: 75%; background-position-y: 30%;}
+    #home-menu-left .home-menu-wrap ul{ height: 40%; top: 44%; }
+    #home-menu-left ul li a, #sub-menu-wrap ul li a{ font-size: 42px;}
     #sub-menu-wrap{ background-size: 75%; }
-    #home-menu-left .home-menu-wrap ul,
-    #sub-menu-wrap ul{ top: 52%; left: 48%; width: 30%; height: 30%; }
+    #sub-menu-wrap ul{ top: 55%; left: 47%; width: 40%; height: 40%; }
+    
     #home .h-right{ width: 45%; left: 70%; height: 95vh; }
-    #home .h-right p{ margin-top: 20px;}    
-    /* #main-left-wrap .left-text-wrap{ transform: translate(-35%, 250px) rotate(-90deg); } */
+    #home .h-right p{ margin-top: 20px;}
     
     section .right{ margin-left: 380px; }
     
     #about h1::before{ left: -7%; top: 60%; width: 100%;}
-    #about .a-r-middle .describe, #about .a-r-bottom .resume, #about .a-r-bottom .skills{ width: 100%; margin-top: 10%;}
+    #about .a-r-middle .describe, #about .a-r-bottom .resume, #about .a-r-bottom .skills{ width: 100%; 
+    padding-right: 5%;}
     #about .a-r-middle .describe p,
     #about .a-r-bottom .resume p{ font-size: 18px; /* padding-right: 20%;*/}
-    /* #about .a-r-bottom .skills p.title{ text-align: left;}
-    #about .a-r-bottom .skills p.title::after{ left: 0; bottom: -10px; width: 100%; }
-    #about .a-r-bottom .skills .item{ font-size: 18px; margin-right: 40%; } */
 
     #about .a-r-bottom .skills{ display: none;}
     #about .a-r-bottom .mobile-skills{ display: block; width: 100%; margin-top: 10%; }
@@ -47,7 +46,10 @@
     #works .right .w-r-bottom .content .box p.explain{ font-size: 18px; }
     #works .right .w-r-bottom .content .box .bgi{ opacity: 0.5; }
     
-    #contact .right .send span:nth-child(2){ top: -25%; }
+    #contact .right .send span{ height: 70%; }
+    #contact .right .send span:nth-child(1){ right: 0; }
+    #contact .right .send span:nth-child(2){ display: none;}
+    #contact .right .mobile-send{ display: block;}
 }
 /* 모바일 사이즈  */
 @media screen and (max-width: 640px){
@@ -55,17 +57,16 @@
     #main-left .main-left-wrap{ background-color: palevioletred; } */
     #gnb{ display: none; }    
     #nav-btn{ top: 390px; left: 70%; }
-    #subBtn{ left: 400px; top: 270px;}
+    #subBtn{ left: 70%; top: 270px;}
     .btnRight{transform: translateY(120px);}
     .pageRight{ width: 100%;}
 
     #home-menu-left, #home .left, #main-left{ left: 0; width: 100%;}
     #home-menu-left{ height: 270px; }
-    #home-menu-left .home-menu-wrap{ width: 640px; height: 440px; 
-        /* 메뉴:노란배경 화면 설정 : 크기 설정 */
-        background-image: none;
-    }
+    /* 메뉴:노란배경 화면 설정 : 크기 설정 */
+    #home-menu-left .home-menu-wrap{ height: 440px; background-image: none; }
     #home-menu-left .home-menu-wrap ul{
+        width: 100%;
         height: 150%;
         top: 85%;
         left: 45%;
@@ -73,7 +74,7 @@
     #home-menu-left .home-menu-wrap ul li a{ font-size: 42px;}
 
     section{margin-top: 290px;}
-    section .right{ margin-left: 0px; }
+    section .right{ margin-left: 0px; top: 50px;}
 
     #home .left, #sub-menu-wrap{ width: 100%; height: 440px; background-image: none; }
     #home .left .mobile-text{ display: block; padding-top: 10%; padding-left: 10%;}    
