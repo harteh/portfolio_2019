@@ -16,12 +16,11 @@ $("document").ready(function(){
         $(this).toggleClass('btnRight')
         $(this).toggleClass('btn-jittery')
         $('.js-btnMenu').toggleClass('is-open')
+        $('#main-left').toggleClass('pageRight')
         $('#main-left-wrap').fadeToggle()
         // about,works,contact 페이지 왼쪽 파란 영역 사라지게 설정
-        $('#main-left').toggleClass('pageRight')
         $('#sub-menu-wrap').fadeToggle()
         //메뉴:노란배경 화면 나타나게 설정
-
     });     //headerSub.html 의 메뉴버튼 클릭 시 설정
 
     var work = $('#works .right .w-r-bottom .content .box'),
@@ -43,25 +42,6 @@ $("document").ready(function(){
         })
         workText.css("display", "")
         workCont.css("opacity", "")
-    });
-
-    $(window).resize(function(){
-        var width = $(window).width();
-
-
-        if( width < 1024, width > 641){
-            $('#subBtn').on('click', function(){
-                $(this).removeClass('btnRight')
-                $(this).toggleClass('btnTabRight')
-            })
-        }
-        
-        // if (width < 640){
-        //     $('#subBtn').on('click', function(){
-        //         $(this).removeClass('btnRight')
-        //         $(this).toggleClass('pageDown')
-        //     })  // 서브페이지들의 메뉴버튼 클릭 시 설정
-        // }
-    })
+    });    
 
 })
