@@ -45,11 +45,16 @@
     #works .right .w-r-bottom .content .box p.heading{ font-size: 28px;}
     #works .right .w-r-bottom .content .box p.explain{ font-size: 18px; }
     #works .right .w-r-bottom .content .box .bgi{ opacity: 0.5; }
-    
+    #contact .right .txt{ height: 220px;}
+    #contact .right .txt p{ line-height: 100px;}
+    #contact .right .send{ height: 100px;}
     #contact .right .send span{ height: 70%; }
     #contact .right .send span:nth-child(1){ right: 0; }
     #contact .right .send span:nth-child(2){ display: none;}
-    #contact .right .mobile-send{ display: block;}
+
+    #contact .right .mobile-send{ display: block;    }
+
+    #contact .right .qr{ margin-top: 100px;}
 }
 /* 모바일 사이즈  */
 @media screen and (max-width: 640px){
@@ -109,13 +114,23 @@
     #about .a-r-bottom .mobile-skills p.title{ font-size: 38px; text-align: left;}
     #about .a-r-middle .describe,
     #about .a-r-bottom .resume,
-    #about .a-r-bottom .skills,
     #about .a-r-bottom .mobile-skills{ width: 100%; margin-top: 10%; }
     #about .a-r-bottom .skills{ display: none;}
-    #about .a-r-bottom .mobile-skills{ display: block;}
-    #about h1.title{ text-align: left; padding-left: 20px; }
+    #about h1.title{ text-align: left; padding-left: 20px;}
     #about h1::before{ width: 96%; left: 4%; top: 55%; height: 3px; }
     #about .a-r-bottom .mobile-skills p.title::after{ left: 0; bottom: 0; width: 100%; }
+
+    #about .a-r-bottom{ position: relative; }    
+    #about .a-r-bottom .mobile-skills{ position: absolute; display: block; top: 100px; }
+    #about .a-r-bottom .resume{        
+        position: absolute;
+        top: 550px;
+        text-align: right;
+    }
+    #about .a-r-bottom .resume .icon{ text-align: center; }
+    #about .a-r-bottom .resume .resume-btn{
+        margin-left: 120px;
+    }
 
     /* works 영역 */    
     #works .right .w-r-top{ text-align: left; width: 90%; height: 100%; }
@@ -131,4 +146,15 @@
     #works .right .w-r-bottom .content .box p.explain{ font-size: 18px; }
     #works .right .w-r-bottom .content .box .bgi{ opacity: 0.5; }
 
+    /* contact 영역 */    
+    #contact .right > div{ text-align: left;}
+    #contact .right .send span:nth-child(2){ display: none;}
+    #contact .right .mobile-send{ display: block; }
+    #contact .right .qr{ display: none}
+    #contact .right .txt{ margin-top: 300px;}
+    #contact .right .txt p{ text-transform: uppercase; font-size: 38px;}
+    #contact .right .txt p, #contact .right .send span{ line-height: 80px; margin-left: 5%;    }
+    #contact .right .send{ height: 100px;}
+    #contact .right .send span:nth-child(1){ font-size: 28px; left: 0; }
+    #contact .right .mobile-send{ left: 5%; }
 }
