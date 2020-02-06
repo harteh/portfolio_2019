@@ -120,7 +120,7 @@ p.mail{
     z-index: 99;
 }
 #nav-btn{ left: 1200px;}
-#subBtn{ left: 310px}
+#subBtn{ left: 310px; transition: all 0.5s ease-out;}
 
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
@@ -152,6 +152,8 @@ p.mail{
     width: 360px;
     height: 100%;
     z-index: 97;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
 }
 .left-text-wrap{
     width: 550px;
@@ -163,10 +165,13 @@ p.mail{
 #main-left .left-text-wrap .mobile-text{ display: none;}
 .pageRight{ width: 1250px; z-index: 90;}
 .btnRight{ transform: translateX(830px);}
-/* .btnTabRight{ transform: translateX(240px);} */
-/* .btnMobileDown{ transform: translateY(240px);} */
 
-/* .pageDown{ top: 350px;} */
+/* 모바일화면에서 스크롤 시 픽스됐을때의 파란영역 설정 */
+.fixMainLeft{
+    background-color: red;
+    height: 100px;
+    overflow: hidden;
+}
 
 /* 공통부분 끝 */
 /*  home 설정 */
@@ -286,9 +291,7 @@ section .right{
     height: 40px;
     border-radius: 90px;
     background-color: #869EBD;
-    font-size: 28px;
-    color: #f4f4f4;
-    text-align: center;
+    box-shadow: rgb(95, 108, 124) 3px 3px 5px;
     position: absolute;
     left: 0;
     cursor: pointer;
@@ -302,7 +305,11 @@ section .right{
     width: 100%;
     max-width: 180px;
     height: 100%;    
-    border-radius: 90px;  
+    border-radius: 90px;
+    font-size: 28px;
+    line-height: 35px;
+    color: #f4f4f4;
+    text-align: center;
 }
 #about .a-r-bottom .resume .resume-view:hover{ background-color: transparent;}
 .resume-btn, .resume-btn::before, .resume-btn::after{
@@ -551,11 +558,12 @@ section .right{
     width: 200px;
     height: 80px;
     border-radius: 40px;
-    background-color: #1D4E89;
+    background-color: #869EBD;
+    box-shadow: rgb(95, 108, 124) 3px 3px 5px;
     position: absolute;
     right: 0;
     line-height: 80px;        
-        cursor: pointer;
+    cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 #contact .right .mobile-send:hover{
@@ -663,13 +671,11 @@ html.modal-active, body.modal-active {    overflow: hidden;}
 }
 #modal-container .modal-background .modal img{
     background: white;
-    padding: 50px;
+    padding: 20px;
     display: inline-block;
     border-radius: 3px;
     font-weight: 300;
     position: relative;
-}
-#modal-container .modal-background .modal img{
     width: 600px;
     height: 848px;
 }

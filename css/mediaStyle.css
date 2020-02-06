@@ -149,7 +149,7 @@
     /* contact 영역 */    
     #contact .right > div{ text-align: left;}
     #contact .right .send span:nth-child(2){ display: none;}
-    #contact .right .mobile-send{ display: block; left: 5%; }
+    #contact .right .mobile-send{ display: block; left: 5%; margin-bottom: 30px; }
     #contact .right .qr{ display: none}
     #contact .right .txt{ margin-top: 300px;}
     #contact .right .txt p{ text-transform: uppercase; font-size: 38px;}
