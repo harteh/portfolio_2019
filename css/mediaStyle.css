@@ -68,6 +68,7 @@
 
     #home-menu-left, #home .left, #main-left{ left: 0; width: 100%;}
     #home-menu-left{ height: 270px; }
+    #main-left{ height: auto;}
     /* 메뉴:노란배경 화면 설정 : 크기 설정 */
     #home-menu-left .home-menu-wrap{ height: 440px; background-image: none; }
     #home-menu-left .home-menu-wrap ul{
@@ -109,9 +110,10 @@
     /* about 영역 */
     #about .a-r-middle .describe p,
     #about .a-r-bottom .resume p{ font-size: 18px; padding-right: 20%;} 
-    #about .a-r-bottom .mobile-skills .m-item{ font-size: 16px;}
+    #about .a-r-bottom .mobile-skills .m-item{ font-size: 14px;}
     h1,
     #about .a-r-bottom .mobile-skills p.title{ font-size: 38px; text-align: left;}
+    #about .a-r-middle .face{ display: none;}
     #about .a-r-middle .describe,
     #about .a-r-bottom .resume,
     #about .a-r-bottom .mobile-skills{ width: 100%; margin-top: 10%; }
@@ -121,16 +123,13 @@
     #about .a-r-bottom .mobile-skills p.title::after{ left: 0; bottom: 0; width: 100%; }
 
     #about .a-r-bottom{ position: relative; }    
-    #about .a-r-bottom .mobile-skills{ position: absolute; display: block; top: 100px; }
+    #about .a-r-bottom .mobile-skills{ position: absolute; display: block; top: 0; }
     #about .a-r-bottom .resume{        
         position: absolute;
-        top: 550px;
-        text-align: right;
+        top: 500px;
+        margin-bottom: 50px;
     }
-    #about .a-r-bottom .resume .icon{ text-align: center; }
-    #about .a-r-bottom .resume .resume-btn{
-        margin-left: 120px;
-    }
+    
 
     /* works 영역 */    
     #works .right .w-r-top{ text-align: left; width: 90%; height: 100%; }
@@ -149,12 +148,11 @@
     /* contact 영역 */    
     #contact .right > div{ text-align: left;}
     #contact .right .send span:nth-child(2){ display: none;}
-    #contact .right .mobile-send{ display: block; }
+    #contact .right .mobile-send{ display: block; left: 5%; }
     #contact .right .qr{ display: none}
     #contact .right .txt{ margin-top: 300px;}
     #contact .right .txt p{ text-transform: uppercase; font-size: 38px;}
     #contact .right .txt p, #contact .right .send span{ line-height: 80px; margin-left: 5%;    }
     #contact .right .send{ height: 100px;}
     #contact .right .send span:nth-child(1){ font-size: 28px; left: 0; }
-    #contact .right .mobile-send{ left: 5%; }
 }
