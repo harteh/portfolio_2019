@@ -79,6 +79,8 @@ $("document").ready(function(){
             })
         } else {
             // 창의 가로길이가 640px 보다 작지않을 때 설정
+            blueSubMain.css({ height: ' ' })
+            subBtn.css({ top: ' ' })
         }
     });
 
