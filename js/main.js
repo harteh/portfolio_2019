@@ -1,9 +1,3 @@
-function openWin(){
-    // 이력서 버튼 클릭 시 인포메이션 이력서 새창으로 띄우기
-    window.open("https://k.kakaocdn.net/dn/bZytwg/btqBqjcKAdC/mjEzc8kYt6SOPNogSD7JPK/img.png", "이력서새창", 
-    "width=730,  height=1030, toolbar=no, menubar=no, resizable=yes");
-}
-
 $("document").ready(function(){
         
     $('#nav-btn').on('click', function(){
@@ -42,6 +36,24 @@ $("document").ready(function(){
         })
         workText.css("display", "")
         workCont.css("opacity", "")
-    });    
+    });
+
+    $('.resume-btn').click(function(){
+        //  모달창 설정
+        var buttonId = $(this).attr('id');
+        $('#modal-container').removeAttr('class').addClass(buttonId);
+        $('body').addClass('modal-active');
+    })
+    
+    $('#modal-container').click(function(){
+        $(this).addClass('out');
+        $('body').removeClass('modal-active');
+    });
 
 })
+
+function openWin(){
+    // 이력서 버튼 클릭 시 인포메이션 이력서 새창으로 띄우기
+    window.open("https://k.kakaocdn.net/dn/bZytwg/btqBqjcKAdC/mjEzc8kYt6SOPNogSD7JPK/img.png", "이력서새창", 
+    "width=730,  height=1030, toolbar=no, menubar=no, resizable=yes");
+}
