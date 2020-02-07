@@ -49,14 +49,14 @@ $("document").ready(function(){
         $(this).addClass('out');
         $('body').removeClass('modal-active');
     }); // 모달창 설정 끝
+    
 
     $(window).resize(function(){
         var width = $(window).width(),
             blueSub = $('#main-left'),
             blueSubMain = $('#main-left-wrap'),
             subBtn = $('#subBtn'),
-            lowSubBtn = $('.btnRight');
-
+            lowSubBtn = $('.btnRight');        
         // 창의 가로길이가 640px 보다 작을때 설정
         if(width < 640) {
 
@@ -77,10 +77,10 @@ $("document").ready(function(){
                 }
                 
             })
-        } else {
+        } else if(width > 641){
             // 창의 가로길이가 640px 보다 작지않을 때 설정
-            blueSubMain.css({ height: ' ' })
-            subBtn.css({ top: ' ' })
+            blueSubMain.css({ height: '100% ' })
+            subBtn.css({ top: ' 75vh' })
         }
     });
 

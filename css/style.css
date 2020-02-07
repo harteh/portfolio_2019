@@ -112,7 +112,7 @@ p.mail{
     position: absolute;
     width: 100px;
     height: 100px;
-    bottom: 15%;    
+    top: 75vh;
     cursor: pointer;
     border-radius: 50%;
     background-color: #FFC107;
