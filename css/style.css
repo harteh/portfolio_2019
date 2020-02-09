@@ -274,17 +274,48 @@ section .right{
     margin-right: 10%;
     position: relative;
 }
-
 #about .a-r-bottom .resume .icon{
     margin: 40px auto;
 }
 #about .a-r-bottom .resume .icon a{
+    position: relative;
     display: inline-block;
     height: 35px;
     width: 35px;
 }
 #about .a-r-bottom .resume .icon a:nth-child(2){
     margin: 0 50px;
+}
+.tooltip{
+    visibility: hidden;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;    
+    text-align: center;
+    background-color: #FFC107;
+    box-shadow: 3px 2px 5px #d7d5d2;
+    position: absolute;
+    top: -40px;
+    padding: 0 10px;
+    margin-left: -60%;
+}
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border:10px solid;
+    border-color: #FFC107 transparent transparent transparent;
+}
+.tooltip span{
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+#about .a-r-bottom .resume .icon a:hover .tooltip{
+    visibility: visible;
 }
 #about .a-r-bottom .resume .resume-view{
     width: 180px;
