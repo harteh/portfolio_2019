@@ -40,11 +40,12 @@
     #works .right .w-r-bottom .content:nth-child(odd) .box{ margin-right: 0; }
     #works .right .w-r-bottom .content:nth-child(even) .box{ margin-left: 0; }
 
-    #works .right .w-r-bottom .content .box{ background: none; transform: scale(0.95); }
+    #works .right .w-r-bottom .content .box{ transform: scale(0.95); }
     #works .right .w-r-bottom .content .box p{ color: #303030; }
     #works .right .w-r-bottom .content .box p.heading{ font-size: 28px;}
     #works .right .w-r-bottom .content .box p.explain{ font-size: 18px; }
-    #works .right .w-r-bottom .content .box .bgi{ opacity: 0.5; }
+    /* #works .right .w-r-bottom .content .box .bgi{ opacity: 0.5; } */
+
     #contact .right .txt{ height: 220px;}
     #contact .right .txt p{ line-height: 100px;}
     #contact .right .send{ height: 100px;}

@@ -189,7 +189,7 @@ p.mail{
     top: 0;
     left: 1250px;
     width: 600px;
-    height: 960px;
+    height: 900px;
 }
 #home .h-right .text-wrap{
     transform: rotate(-90deg);
@@ -225,6 +225,9 @@ section .right{
 #about .a-r-middle,
 #about .a-r-bottom{
     margin-left: 10%;
+}
+#about .a-r-bottom{
+    height: 350px;
 }
 #about h1.title{
     text-align: center;
@@ -380,6 +383,10 @@ section .right{
     height: 100%;
     text-transform: uppercase;
 }
+#about .a-r-bottom .skills{
+    position: relative;
+    top: -100px;
+}
 #about .a-r-bottom .skills p.title,
 #about .a-r-bottom .mobile-skills p.title{
     font-size: 2.704vw;
@@ -509,7 +516,7 @@ section .right{
     cursor: pointer;
     width: 46%;
     height: 520px;
-    background-color: #869EBD;
+    background: none;
     float: left;
     transition: all 1s;
     position: relative;
@@ -524,6 +531,7 @@ section .right{
 #works .right .w-r-bottom .content .box p{
     position: absolute;
     left: 5%;
+    color: #000;
 }
 #works .right .w-r-bottom .content .box p.fn{
     top: 10%;
@@ -545,7 +553,7 @@ section .right{
     top: 0;
 }
 #works .right .w-r-bottom .content .box .bgi{
-    opacity: 0;
+    opacity: 0.5;
     transition: all 1s;
 }
 #works .right .w-r-bottom .content .box .bgi img{
