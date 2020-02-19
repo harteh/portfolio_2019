@@ -50,8 +50,8 @@ p.mail{
     z-index: 90;
 }
 #home-menu-left .home-menu-wrap{
-    width: 1250px;
-    /* width: 65%; */
+    /* width: 1250px; */
+    width: 65vw;
     height: 100%;
     display: none;
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;    
@@ -119,13 +119,11 @@ p.mail{
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     z-index: 99;
 }
-#nav-btn{ left: 1200px;}
+#nav-btn{ left: 62vw;}
 #subBtn{ left: 310px; transition: all 0.5s ease-out;}
 
 /* 버튼에 애니메이션 설정 */
 .btn-jittery{ animation: jittery 5s infinite; }
-/* .btn-jittery:hover{ animation: heartbeat 0.3s infinite;	} */
-/* #nav-btn:hover, #subBtn:hover{ animation: heartbeat 0.3s infinite;	} */
 @keyframes jittery {	5%, 50% { transform: scale(1);}	10% { transform: scale(0.9);}	15% { transform: scale(1.1);}	20% { transform: scale(1.1) rotate(-5deg);}	25% { transform: scale(1.1) rotate(5deg);}	30% { transform: scale(1.1) rotate(-3deg);}	35% { transform: scale(1.1) rotate(2deg);}	40% { transform: scale(1.1) rotate(0);}}
 @keyframes heartbeat {	50% { transform: scale(1.1);}}
 .btnMenu span, .btnMenu span::before, .btnMenu span::after{ display: block; width: 70%; height: 8px; background-color: #fff; border-radius: 4px;}
@@ -137,10 +135,8 @@ p.mail{
 .is-open span::before{ top: 0; transition: top 0.3s cubic-bezier(.23, 1, .32, 1), transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1); transform: rotate(-45deg);}
 .is-open span::after{ bottom: 0; transition: bottom .3s cubic-bezier(.23, 1, .32, 1), transform 0.3s 0.3s cubic-bezier(.23, 1, .32, 1); transform: rotate(45deg);}
 
-/*  headerSub: about,works,contact 페이지 왼쪽 파란 영역*/
 
 #main-left{
-    /* width: 410px; */
     height: 970px;
     position: fixed;
     left: 70px;
@@ -178,7 +174,8 @@ p.mail{
 #home .left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
     z-index: 85;
-    width: 1250px;
+    /* width: 1250px; */
+    width: 65vw;
     height: 960px;
 }
 #home .left .mobile-text{
@@ -187,9 +184,9 @@ p.mail{
 #home .h-right{
     position: absolute;
     top: 0;
-    left: 1250px;
-    width: 600px;
-    height: 900px;
+    left: 65vw;
+    width: 31vw;
+    height: 100vh;
 }
 #home .h-right .text-wrap{
     transform: rotate(-90deg);

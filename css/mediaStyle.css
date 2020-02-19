@@ -8,6 +8,7 @@
     #works .right .w-r-top p{ font-size: 28px;}
     #gnb{ display: none; }
     #nav-btn{ left: 580px;}
+    
     .btnRight{ transform: translateX(240px);}
     .pageRight{ width: 630px;}
     #home-menu-left, #home .left, #main-left{ left: 0; }
