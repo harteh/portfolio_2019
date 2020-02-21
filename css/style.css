@@ -21,10 +21,7 @@ body{
 /* 왼쪽 고정 gnb 영역 */
 #gnb{
     width: 70px;
-    /* width: 3.5%; */
-    height: 970px;
-    /* height: 100vh; */
-
+    height: 100%;
     background-color: #123C73;
     position: fixed;
     top: 0;
@@ -174,9 +171,8 @@ p.mail{
 #home .left{
     background: #1D4E89 url("../images/ZombieingDoodle02.png") no-repeat center/70%;
     z-index: 85;
-    /* width: 1250px; */
     width: 65vw;
-    height: 960px;
+    height: 100%;
 }
 #home .left .mobile-text{
     display: none;
@@ -193,7 +189,7 @@ p.mail{
     position: absolute;
     text-align: right;
     bottom: 25%;
-    width: 120%;
+    width: 100%;
     height: 40%;
 }
 #home .h-right p{
@@ -447,7 +443,7 @@ section .right{
 /* 스크롤유도 표시 : 화면 하단에 고정 */
 #works .right .scroll{
     position: fixed;
-    bottom: 20px;
+    bottom: 55px;
     right: 50px;
     z-index: 99;
 }
