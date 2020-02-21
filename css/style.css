@@ -205,10 +205,9 @@ p.mail{
 }
 section{ width: 100%; height: 100%; /* position: relative; */ }
 section .right{
-    /* width: 1420px; */
-    /* margin-left: 480px; */
     height: 100%;
-    margin-left: 24.96vw;
+    /* margin-left: 24.96vw; */
+    margin-left: 460px;
     position: relative;
 }
 /* about 영역 */
