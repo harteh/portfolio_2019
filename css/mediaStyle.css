@@ -17,7 +17,7 @@
     #home-menu-left .home-menu-wrap ul{ height: 40%; top: 44%; }
     #home-menu-left ul li a, #sub-menu-wrap ul li a{ font-size: 42px;}
     #sub-menu-wrap{ background-size: 75%; }
-    #sub-menu-wrap ul{ top: 55%; left: 47%; width: 40%; height: 40%; }
+    #sub-menu-wrap ul{ top: 60vh; left: 47%; width: 40%; height: 40%; }
     
     #home .h-right{ width: 45%; left: 55%; height: 95vh; }
     #home .h-right p{ margin-top: 20px;}
@@ -106,7 +106,7 @@
     /* #sub-menu-wrap{ position: relative;} */
     #sub-menu-wrap{ position: absolute; top: 0;}
 
-    #sub-menu-wrap ul{ width: 100%; height: 100%; }
+    #sub-menu-wrap ul{ width: 100%; height: 100%; top: 55%;}
     #sub-menu-wrap ul li{ line-height: 100px; }
     #sub-menu-wrap ul li a{ font-size: 38px;}
 

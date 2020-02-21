@@ -50,6 +50,7 @@ p.mail{
     /* width: 1250px; */
     width: 65vw;
     height: 100%;
+    /* height: 100vh; */
     display: none;
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;    
 }
@@ -65,14 +66,14 @@ p.mail{
 #sub-menu-wrap{
     background: #FFC107 url("../images/TODOlist.png") no-repeat center/45%;
     width: 95%;
-    height: 100%;
+    height: 100vh;
     display: none;
 }
 #sub-menu-wrap ul{
     width: 35%;
     height: 50%;
     position: absolute;
-    top: 55%;
+    top: 60vh;
     left: 47%;
     transform: translate(-48%, -55%);
 }
