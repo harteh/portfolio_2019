@@ -71,7 +71,7 @@
     #home-menu-left{ height: 270px; }
     #main-left{ height: auto;}
     /* 메뉴:노란배경 화면 설정 : 크기 설정 */
-    #home-menu-left .home-menu-wrap{ height: 440px; background-image: none; }
+    #home-menu-left .home-menu-wrap{ width: 100vw; height: 440px; background-image: none; }
     #home-menu-left .home-menu-wrap ul{
         width: 100%;
         height: 150%;
