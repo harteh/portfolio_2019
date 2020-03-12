@@ -125,7 +125,7 @@ p.mail{
 @keyframes jittery {	5%, 50% { transform: scale(1);}	10% { transform: scale(0.9);}	15% { transform: scale(1.1);}	20% { transform: scale(1.1) rotate(-5deg);}	25% { transform: scale(1.1) rotate(5deg);}	30% { transform: scale(1.1) rotate(-3deg);}	35% { transform: scale(1.1) rotate(2deg);}	40% { transform: scale(1.1) rotate(0);}}
 @keyframes heartbeat {	50% { transform: scale(1.1);}}
 .btnMenu span, .btnMenu span::before, .btnMenu span::after{ display: block; width: 70%; height: 8px; background-color: #fff; border-radius: 4px;}
-.btnMenu span{ position: relative; transition: all 0.3; top: 45px; left: 50%; transform: translateX(-50%);}
+.btnMenu span{ position: relative; transition: all 0.3s; top: 45px; left: 50%; transform: translateX(-50%);}
 .btnMenu span::before, .btnMenu span::after{ content: ""; position: absolute; width: 100%;}
 .btnMenu span::before{ top: 20px; transition: top .3s .3s cubic-bezier(.23, 1, .32, 1), transform .3s cubic-bezier(.23, 1, .32, 1);}
 .btnMenu span::after{ background-color: #1D4E89; bottom: 20px; transition: bottom .3s .3s cubic-bezier(.23, 1, .32, 1), transform .3s cubic-bezier(.23, 1, .32, 1);}
@@ -396,7 +396,7 @@ section .right{
 #about .a-r-bottom .mobile-skills .m-item span{
     display: inline-block;
     background-color: #1D4E89;
-    border: 1px solid #1D4E89;
+    border: 1px solid;
 }
 #about .a-r-bottom .skills .item span{
     width: 20px;
